@@ -1,0 +1,13 @@
+/* ImageScroll.css */
+
+  
+.image-container {
+    position: absolute;
+    transform: translateY(-50%); /* Pour bien centrer verticalement */
+}
+  
+.scroll-image {
+    width: 200px; /* Largeur de l'image */
+    height: auto;
+}
+  

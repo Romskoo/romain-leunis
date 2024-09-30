@@ -1,0 +1,41 @@
+.header{ 
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    color: var(--color-neutral);
+
+    .header-container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px;
+
+        .name{
+            font-size: 20px;
+            text-align: start;
+        }
+        .container-menu{
+            display: flex;
+            gap: 50px;
+
+            .item{
+                cursor: pointer;
+            }
+
+            .item:hover{
+                color: var(--color-contrast);
+            }
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    .header{
+        .header-container{
+            .container-menu{ 
+                gap: 20px;           
+            }
+        }
+    }
+}

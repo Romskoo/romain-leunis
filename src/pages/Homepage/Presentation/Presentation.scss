@@ -1,0 +1,59 @@
+.presentation{
+    padding: 20px;
+    gap: 40px;
+    display: flex;
+    flex-direction: column;
+
+    .container-text{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+
+        .title{
+            color: var(--color-primary);
+        }
+        .text{
+            width: 50%;
+            text-justify: distribute;
+            text-align: start;
+        }
+    }
+
+    .container-romain{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .romain{
+            width: 450px;
+            height: 300px;
+            border-radius: 40px;
+            background-image: url('../../../assets/romain.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    .presentation{
+        .container-text{
+    
+            .title{}
+
+            .text{
+                width: 80%;
+            }
+        }
+
+        .container-romain{
+            .romain{
+                width: 80%;
+                height: 250px;
+            }
+        }
+    }
+}
