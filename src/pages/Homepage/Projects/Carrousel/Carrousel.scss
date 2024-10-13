@@ -1,0 +1,11 @@
+* {
+	box-sizing: border-box;
+}
+.Carrousel {
+	min-height: 100vh;
+	padding: 0;
+	margin: 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+
