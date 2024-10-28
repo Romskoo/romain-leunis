@@ -17,7 +17,7 @@ const FadeIn = forwardRef(({ children, duration = 1, x = 0, className = '' }, re
         trigger:`.${className}`,
         start:"top center",
         end:"bottom center",
-        markers:true,
+        
         toggleActions:"play reverse play reverse"
       },
       opacity: 0,

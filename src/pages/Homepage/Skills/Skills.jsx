@@ -6,6 +6,7 @@ import logoHtml from '../../../assets/html.svg';
 import logoJs from '../../../assets/js.png';
 import logoVue from '../../../assets/vue.webp';
 import logoReact from '../../../assets/react.png';
+import logoNext from '../../../assets/nextjs.webp';
 
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
@@ -16,11 +17,11 @@ const Skills = () => {
     const animation = useRef();
    
     useGSAP(() => {
-        gsap.to(".icon", {duration: 2, rotationY:360, repeat:-1});
+        gsap.to(".icon", {duration: 2, rotationY:360,stagger:0.5, repeat:-1});
     });
 
     return(
-        <div className='Skills'>
+        <div className='Skills home-component'>
             <span className='titre-section'>Mes compétances techniques</span>
             <div className='container-section'>
                 <FadeIn className="box1-fadeIn" duration={1} x={-500} ref={animation}>
@@ -59,6 +60,10 @@ const Skills = () => {
                                 <div className='icon-wrapper'>
                                     <img src={logoVue} alt="vue" className='icon' />
                                     <label>Vue Js</label>
+                                </div>
+                                <div className='icon-wrapper'>
+                                    <img src={logoNext} alt="vue" className='icon' />
+                                    <label>Next Js</label>
                                 </div>
                             </div>
                         </div>

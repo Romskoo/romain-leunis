@@ -1,7 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import './Nuage.scss'; // Pour le style
 import imageNuage from '../../../../assets/nuage-bg2.png';
+import gsap from 'gsap';
+import { useRef,forwardRef, memo } from 'react';
+import { useGSAP } from '@gsap/react';
+import {ScrollTrigger} from 'gsap/src/ScrollTrigger';
 
+/*
 const Nuage = ({ direction = 'right', className }) => {
   const [scrollPosition, setScrollPosition] = useState(0);
 
@@ -36,6 +41,47 @@ const Nuage = ({ direction = 'right', className }) => {
       />
     </div>
   );
-};
+};*/
+
+gsap.registerPlugin(useGSAP);
+gsap.registerPlugin(ScrollTrigger);
+
+const Nuage = forwardRef(({ duration = 1, x = 0, className = '' }, ref) => {
+  const el = useRef();
+  const animation = useRef();
+
+  useGSAP(() => {
+    animation.current = gsap.to(el.current.children, {
+      scrollTrigger:{
+        trigger:`.${className}`,
+        toggleActions:"play reverse play reverse",
+        scrub:1,
+      },
+      duration,
+      x
+    });
+  });
+
+  useGSAP(() => {
+    // forward the animation instance
+    if (typeof ref === "function") {
+      ref(animation.current);
+    } else if (ref) {
+      ref.current = animation.current;
+    }
+  }, [ref]);
+
+  return (
+    <div className={`${className} image-container`} ref={el}>
+      <img
+        src={imageNuage}
+        alt="scroll image"
+        className="scroll-image"
+      />
+    </div>
+  );
+});
+
+
 
 export default Nuage;

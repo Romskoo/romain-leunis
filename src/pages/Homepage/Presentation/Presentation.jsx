@@ -5,7 +5,7 @@ import imageRomain from '../../../assets/romain.jpg';
 
 const Presentation = ({id}) => {
     return(
-        <div className='presentation' id={id}>
+        <div className='presentation home-component' id={id}>
             <div className='container-text'>
                 <span className='title'>Qui suis-je ?</span>
                 <span className='text'>

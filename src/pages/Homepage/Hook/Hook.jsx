@@ -1,13 +1,14 @@
 import './Hook.scss';
-import { memo } from 'react';
+import { memo, useRef } from 'react';
 import Nuage from './Nuage/Nuage';
 import iconArrow from '../../../assets/down-arrow.png'
 
 const Hook = ({id}) => {
+    const animation = useRef();
     return(
-        <div className='hook' id={id}>
-            <Nuage className='nuage-haut' />
-            <Nuage className='nuage-bas' direction='left'/>
+        <div className='hook home-component' id={id}>
+            <Nuage className='nuage-haut' x={500} ref={animation} />
+            <Nuage className='nuage-bas' x={-500} ref={animation} />
             <div className='intro-container'>
                 <span className='name'>
                     Romain Leunis
