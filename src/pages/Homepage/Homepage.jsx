@@ -1,85 +1,59 @@
 import './Homepage.scss';
-import Hook from './Hook/Hook';
+import { useRef,useEffect,useState } from "react";
+
+import Hook from './Hook2/Hook';
 import Presentation from './Presentation/Presentation';
 import Skills from './Skills/Skills';
-import Projects from './Projects/Projects';
-
-import gsap from 'gsap';
-import { useGSAP } from '@gsap/react';
-import {ScrollTrigger} from 'gsap/src/ScrollTrigger';
-import ScrollToPlugin from 'gsap/ScrollToPlugin';
-
-gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 const Homepage = () => {
-    useGSAP(() => {
-        let panels = gsap.utils.toArray(".home-component"),observer,scrollTween;
+    const scrollContainer = useRef(null);
+    const [scrollProgress, setScrollProgress] = useState(0);
 
-        if (ScrollTrigger.isTouch === 1) {
-            observer = ScrollTrigger.normalizeScroll(true);
+    // Gestion du scroll horizontal
+    const handleScroll = (event) => {
+        if (scrollContainer.current) {
+            scrollContainer.current.scrollLeft += event.deltaY * 2; // Transforme le scroll vertical en horizontal
+            updateProgress(); // Met à jour la barre de progression
         }
-        
-        // on touch devices, ignore touchstart events if there's an in-progress tween so that touch-scrolling doesn't interrupt and make it wonky
-        document.addEventListener("touchstart", e => {
-            if (scrollTween) {
-            e.preventDefault();
-            e.stopImmediatePropagation();
-            }
-        }, {capture: true, passive: false})
-        
-        function goToSection(i) {
-            scrollTween = gsap.to(window, {
-            scrollTo: {y: i * window.innerHeight, autoKill: false},
-            onStart: () => {
-                if (!observer) return;
-                observer.disable(); // for touch devices, as soon as we start forcing scroll it should stop any current touch-scrolling, so we just disable() and enable() the normalizeScroll observer
-                observer.enable();
-            },
-            duration: 0.8,
-            onComplete: () => scrollTween = null,
-            overwrite: true
-            });
+    };
+
+    // Mise à jour de la barre de progression
+    const updateProgress = () => {
+        if (scrollContainer.current) {
+            const { scrollLeft, scrollWidth, clientWidth } = scrollContainer.current;
+            const progress = (scrollLeft / (scrollWidth - clientWidth)) * 100;
+            setScrollProgress(progress);
         }
-        
-        panels.forEach((panel, i) => {
-            ScrollTrigger.create({
-            trigger: panel,
-            start: "top bottom",
-            end: "+=199%",
-            markers:true,
-            onToggle: self => self.isActive && !scrollTween && goToSection(i)
-            });
-        });
-        
-        // just in case the user forces the scroll to an inbetween spot (like a momentum scroll on a Mac that ends AFTER the scrollTo tween finishes):
-        ScrollTrigger.create({
-            start: 0, 
-            end: "max",
-            snap: {
-                snapTo: 1 / (panels.length - 1),
-                delay: 0,  // Supprime tout délai pour minimiser les décalages
-                onInterrupt: () => scrollTween = null,  // S'assure que le tween est nul en cas d'interruption
-            },
-            onUpdate: self => {
-                if (scrollTween) {
-                    self.disable();  // Désactive temporairement le snap quand une animation est en cours
-                } else {
-                    self.enable();   // Active le snap quand aucune animation n’est en cours
-                }
+    };
+
+    // Écouteur pour le scroll
+    useEffect(() => {
+        const container = scrollContainer.current;
+        if (container) {
+            container.addEventListener("scroll", updateProgress);
+        }
+        return () => {
+            if (container) {
+                container.removeEventListener("scroll", updateProgress);
             }
-        });
-    });
-    
+        };
+    }, []);
 
+    return (
+        <div className="homepage-container">
+            {/* Barre de progression */}
+            <div className="progress-bar">
+                <div className="progress" style={{ width: `${scrollProgress}%` }}></div>
+            </div>
 
-    return(
-        <div className='homepage'>
-            <Hook id="hook"/>
-            <Presentation id="presentation"/>
-            <Skills id="skills" />
-            <Projects id="projects" />
+            {/* Contenu scrollable */}
+            <div className="homepage" ref={scrollContainer} onWheel={handleScroll}>
+                <Hook id="hook" />
+                <Presentation />
+                <Skills id="skills" />
+            </div>
         </div>
-    )
-}
+    );
+};
 
 export default Homepage;

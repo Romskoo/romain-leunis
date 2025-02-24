@@ -7,9 +7,12 @@ body {
   --color-secondary:#226D68;
   --color-neutral:#ECF8F6;
   --color-contrast:#FEEAA1;
-  font-family: "JetBrains Mono", monospace;
+  --scrollbar-width:15px;
+  /*font-family: "JetBrains Mono", monospace;*/
+  font-family: Suisse, sans-serif;
   font-weight: 400;
   font-size: 16px;
+  scrollbar-width: var(--scrollbar-width);
 }
 
 code {

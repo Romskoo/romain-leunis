@@ -9,11 +9,18 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 15px;
+        padding: 20px;
 
         .name{
             font-size: 20px;
             text-align: start;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            .logo{
+                height: 30px;
+            }
         }
         .container-menu{
             display: flex;

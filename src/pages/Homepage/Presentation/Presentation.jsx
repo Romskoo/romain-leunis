@@ -1,25 +1,20 @@
 import './Presentation.scss';
-import { memo } from 'react';
+import { memo, useRef, useEffect } from 'react';
+import PhotoRomain from '../../../assets/romain2.jpg';
 
-import imageRomain from '../../../assets/romain.jpg';
-
-const Presentation = ({id}) => {
+const Presentation = () => {
     return(
-        <div className='presentation home-component' id={id}>
-            <div className='container-text'>
-                <span className='title'>Qui suis-je ?</span>
-                <span className='text'>
-                    Je suis un jeune développeur possionné de technologie
-                    et d’entreprenariat. Fort de mes 5 années d’expérience
-                    dans l’informatique je suis à la recherche de nouvelles
-                    opportunités. Que tu recherches un associé ou simplement
-                    une personne qualifée pour développer ton projet, 
-                    n’hésites pas à <span className='text-action'>me contacter</span>.
-                </span>
+        <div className='presentation home-component'>
+            <div className="image-container" >
+                <img src={PhotoRomain} alt="Romain" className='image'/>
             </div>
-            <div className='container-romain'>
-                <div className='romain'/>
+            <div className='histoire-container'>
+                <div className='histoire'>
+                    <span>Diplomé de l'école d'ingénieur ENSIIE spécialisée dans les systèmes d'information.</span>
+                    <span>Je travaille depuis 5 ans dans le secteur de la grande distribution au sein de la STIME.</span>
+                </div>
             </div>
+            
         </div>
     )
 }
