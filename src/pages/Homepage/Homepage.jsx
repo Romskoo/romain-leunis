@@ -7,9 +7,8 @@ import Skills from './Skills/Skills';
 
 const Homepage = () => {
     
-
     return (
-            <div className="homepage">
+            <div className="homepage" >
                 <Hook id="hook" />
                 <Presentation />
                 <Skills id="skills" />

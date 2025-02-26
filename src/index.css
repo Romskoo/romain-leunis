@@ -1,30 +1,35 @@
+:root {
+  /*Thème*/
+  --bg-color: #000;
+  --text-color: #ffffff;
+  --primary-color: #1e90ff;
+
+  
+}
+
+[data-theme="dark"] {
+  --bg-color: #000;
+  --text-color: #ffffff;
+  --primary-color: #1e90ff;
+}
+
+[data-theme="light"] {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --primary-color: #007bff;
+}
+
 body {
   margin: 0;
-  
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  --color-primary:#18534F;
-  --color-secondary:#226D68;
-  --color-neutral:#ECF8F6;
-  --color-contrast:#FEEAA1;
-  --scrollbar-width:15px;
-  /*font-family: "JetBrains Mono", monospace;*/
   font-family: Suisse, sans-serif;
   font-weight: 400;
   font-size: 16px;
-  scrollbar-width: var(--scrollbar-width);
-}
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
-
-.text-action{
-  color: var(--color-secondary);
-  cursor: pointer;
-  font-weight: 500;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  
 }
 
 a{
@@ -32,10 +37,6 @@ a{
   color: unset;
 }
 
-.title{
-  font-weight: 500;
-  font-size: 24px;
-}
 
 @media (max-width: 800px) {
   body {

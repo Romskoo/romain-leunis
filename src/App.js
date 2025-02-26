@@ -10,6 +10,7 @@ import Menu from './components/Menu/Menu';
 const Layout = () => {
   return(
     <>
+      <Menu/>
       <Header/>
       <Outlet />
     </>

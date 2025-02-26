@@ -1,40 +1,63 @@
-import React, { useState, useEffect } from 'react';
-import './TextScrollAnimation.css';
+import { useEffect, useRef } from "react";
+import SplitType from "split-type";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-const calculateTextColor = (scrollPosition) => {
-  const hue = scrollPosition % 360;
-  return `hsl(${hue}, 100%, 50%)`;
-};
+gsap.registerPlugin(ScrollTrigger);
 
-const TextScrollAnimation = ({ text }) => {
-  const [scrollPosition, setScrollPosition] = useState(0);
+export default function ScrollingText({ texte, parentRef }) {
+  const textRef = useRef(null);
+  let split, tl;
 
   useEffect(() => {
-    const handleWheel = (e) => {
-      e.preventDefault();
-      setScrollPosition(window.scrollY + e.deltaY);
-    };
+    if (!parentRef.current) return;
 
-    const handleScrollBar = () => {
-      setScrollPosition(window.scrollY);
-    };
+    // Nettoyage des animations existantes
+    split && split.revert();
+    tl && tl.revert();
 
-    window.addEventListener('wheel', handleWheel);
-    window.addEventListener('scroll', handleScrollBar);
+    // Découper le texte en mots (au lieu de caractères)
+    split = new SplitType(textRef.current, { types: "words" });
+
+    // Timeline GSAP avec ScrollTrigger
+    tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: parentRef.current,
+        start: "top top",
+        end: "+=150%",
+        pin: true,
+        pinSpacing: true, // Ajout de l'espacement pour éviter le chevauchement
+        anticipatePin: 1,
+        scrub: 0.75,
+      },
+    });
+
+    // Animation de changement de couleur progressive
+    tl.to(split.words, { // Cibler les mots au lieu des caractères
+      color: "#FFF",
+      stagger: 0.1, // Décalage progressif sur chaque mot
+      duration: 1.5,
+    });
+
+    // Nettoyage après resize pour éviter les bugs
+    const debouncer = gsap.delayedCall(0.2, () => {
+      split.revert();
+      tl.revert();
+      split = new SplitType(textRef.current, { types: "words" });
+    }).pause();
+
+    window.addEventListener("resize", () => debouncer.restart(true));
 
     return () => {
-      window.removeEventListener('wheel', handleWheel);
-      window.removeEventListener('scroll', handleScrollBar);
+      split.revert();
+      tl.revert();
+      window.removeEventListener("resize", () => debouncer.restart(true));
     };
-  }, []);
-
-  const textColor = calculateTextColor(scrollPosition);
+  }, [parentRef]);
 
   return (
-    <section className="scroll-color-section">
-      <p style={{ color: textColor }}>{text}</p>
-    </section>
+    <div className="scrolling-text">
+      <p ref={textRef}>{texte}</p>
+    </div>
   );
-};
-
-export default TextScrollAnimation;
+}
