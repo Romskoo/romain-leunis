@@ -24,7 +24,7 @@ export default function ScrollingText({ texte, parentRef }) {
       scrollTrigger: {
         trigger: parentRef.current,
         start: "top top",
-        end: "+=150%",
+        end: "bottom top",
         pin: true,
         pinSpacing: true, // Ajout de l'espacement pour éviter le chevauchement
         anticipatePin: 1,

@@ -9,30 +9,35 @@ function ParallaxImage({ src, className, parentRef}) {
   const wrapperRef = useRef(null);
 
   useEffect(() => {
-    if (!imageRef.current || !wrapperRef.current) return;
-  
-    const wrapperHeight = wrapperRef.current.offsetHeight;
-  
-    ScrollTrigger.create({
-      trigger: wrapperRef.current,
-      start: "bottom 80%",
-      end: `top+=${wrapperHeight} 20%`,
-      markers: true,
-      onUpdate: (self) => {
-        const progress = self.progress;
-        let scale = 1;
-  
-        if (progress < 0.2) {
-          scale = 1 + progress * 0.5; // Zoom dans les 20% supérieurs
-        } else if (progress > 0.8) {
-          scale = 1 + (1 - progress) * 0.5; // Dézoom dans les 20% inférieurs
-        } else {
-          scale = 1.1; // Maintien du zoom au centre
-        }
-  
-        gsap.to(imageRef.current, { scale, ease: "none" });
+    if (!imageRef.current || !parentRef.current) return;
+
+    const wrapperHeight = parentRef.current.offsetHeight;
+
+    gsap.timeline({
+      scrollTrigger: {
+        trigger: parentRef.current,
+        start: 'top 10%',
+        end: 'top top',
+        scrub: true,
+        markers: true,
       },
-    });
+    }).to(imageRef.current, { scale: 1.2, ease: 'power1.in' });
+
+    // Seconde timeline
+    gsap.timeline({
+      scrollTrigger: {
+        trigger: parentRef.current,
+        start: `bottom+=${wrapperHeight} bottom`,
+        end:  `bottom+=${wrapperHeight} 80%`,
+        scrub: true,
+        markers: true,
+      },
+    }).to(imageRef.current, { scale: 1, ease: 'power1.out' });
+
+    // Clean up ScrollTrigger instances when component unmounts
+    return () => {
+      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+    };
   }, [src]);
   
   return (
