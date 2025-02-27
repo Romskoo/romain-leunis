@@ -19,7 +19,6 @@ function ParallaxImage({ src, className, parentRef}) {
         start: 'top 10%',
         end: 'top top',
         scrub: true,
-        markers: true,
       },
     }).to(imageRef.current, { scale: 1.2, ease: 'power1.in' });
 
@@ -30,7 +29,6 @@ function ParallaxImage({ src, className, parentRef}) {
         start: `bottom+=${wrapperHeight} bottom`,
         end:  `bottom+=${wrapperHeight} 80%`,
         scrub: true,
-        markers: true,
       },
     }).to(imageRef.current, { scale: 1, ease: 'power1.out' });
 

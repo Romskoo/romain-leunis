@@ -10,21 +10,17 @@ import Menu from './components/Menu/Menu';
 const Layout = () => {
   return(
     <>
-      <Menu/>
       <Header/>
       <Outlet />
     </>
   )
 }
 const router = createBrowserRouter([
+  
   {
-    path: "/",
-    element: <Introduction/>,
-  },
-  {
-    path: "/home",
     element: <Layout />,
     children: [
+      { path: "/", element: <Introduction/>,},
       { path: "/home", element: <Homepage /> },
     ],
   },
@@ -33,7 +29,7 @@ const router = createBrowserRouter([
 
 function App() {
   return (
-    <div className="App">
+    <div className="App" data-the>
       <RouterProvider router={router} />
     </div>
   );

@@ -11,7 +11,7 @@ import IconProjectsWhite from '../../assets/projects-white.png';
 import IconLinkedinWhite from '../../assets/linkedin-white.png';
 
 const Menu = () => {
-    const navigate = useNavigate();
+    const navigate = useNavigate();   
 
     const handleClickHome = () => {
         navigate('/home');
