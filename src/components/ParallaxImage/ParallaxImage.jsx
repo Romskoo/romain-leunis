@@ -16,22 +16,11 @@ function ParallaxImage({ src, className, parentRef}) {
     gsap.timeline({
       scrollTrigger: {
         trigger: parentRef.current,
-        start: "top 10%",
+        start: "bottom bottom",
         end: `bottom+=${wrapperHeight*2} bottom`,
-        onEnter: () => {
-          gsap.to(imageRef.current, { scale: 1.1, ease: "power1.in", duration: 0.5 });
-        },
-        onLeaveBack: () => {
-            gsap.to(imageRef.current, { scale: 1, ease: "power1.out", duration: 0.5 });
-        },
-        onEnterBack: () => {
-            gsap.to(imageRef.current, { scale: 1.1, ease: "power1.in", duration: 0.5 });
-        },
-        onLeave: () => {
-            gsap.to(imageRef.current, { scale: 1, ease: "power1.out", duration: 0.5 });
-        }
+        scrub:true,
       },
-    });
+    }).to(imageRef.current,{scale:1.2})
 
     // Clean up ScrollTrigger instances when component unmounts
     return () => {
