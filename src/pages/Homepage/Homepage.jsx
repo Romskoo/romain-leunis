@@ -11,7 +11,6 @@ const Homepage = () => {
             <div className="homepage" >
                 <Hook id="hook" />
                 <Presentation />
-                <Skills id="skills" />
             </div>
     );
 };

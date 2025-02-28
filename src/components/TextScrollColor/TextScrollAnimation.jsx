@@ -34,7 +34,7 @@ export default function ScrollingText({ texte, parentRef }) {
 
     // Animation de changement de couleur progressive
     tl.to(split.words, { // Cibler les mots au lieu des caractères
-      color: "#FFF",
+      color: "#EEE",
       stagger: 0.1, // Décalage progressif sur chaque mot
       duration: 1.5,
     });
