@@ -36,12 +36,12 @@ const LanguagePicker = () => {
     }, []);
 
     return (
-        <div className="language-picker">
+        <div className="language-picker" ref={dropdownRef}>
             <button className="dropdown-button" onClick={() => setIsOpen(!isOpen)}>
                 <img src={IconLanguageWhite} alt="world" className="icon-language"/> {i18n.language.toUpperCase()} ▼
             </button>
             {isOpen && (
-                <ul className="dropdown-menu" ref={dropdownRef}>
+                <ul className="dropdown-menu" >
                     {languages.map((lang) => (
                         <li key={lang.code} onClick={() => changeLanguage(lang.code)}>
                             {lang.label}
