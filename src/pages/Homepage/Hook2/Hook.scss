@@ -7,6 +7,13 @@
     flex-wrap: wrap;
     margin-inline: 40px;
 
+
+    .container-slideIn{
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+    }
+
     .animation-gif{
         position: absolute;
         top: 10%;
@@ -27,14 +34,14 @@
 
         .title{
             font-family: "JetBrains Mono", monospace;
-            font-size: 8em;
+            font-size: 9vw;
             font-weight: 800;
             z-index: 1;
             line-height: 100%;
-            letter-spacing: -10px;
+            letter-spacing: -8px;
             word-break: keep-all;
             line-break: strict;
-            opacity: 0.5;
+            opacity: 0.7;
             
         }
     }
@@ -51,20 +58,20 @@
         .description{
             font-weight: 400;
             line-height: 1.1;
-            font-size: 40px;
+            font-size: 2vw;
             font-family: "Poppins", serif;
             max-width: 80%;
             white-space: normal;
             color: #FFF;
             display: flex;
             flex-direction: column;
-            gap: 20px;         
 
             .buttons{
                 display: flex;
                 justify-content: flex-start;
                 gap: 20px;
                 font-size: 22px;
+                margin-top: 20px;
 
                 .button-contact{
                     background-color: #EEE;

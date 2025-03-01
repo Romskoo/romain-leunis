@@ -1,13 +1,44 @@
 import './Hook.scss';
 
+import { useRef } from 'react';
 import { useTranslation } from 'react-i18next';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+
 import AnimationGif from '../../../assets/bg-animation3.gif';
+
+gsap.registerPlugin(useGSAP);
 
 const Hook = () => {
     const { t } = useTranslation();
+    const hookContainer = useRef();
+   
+    useGSAP(() => {
+        gsap.from(".slideIn", {
+            y: "100%",
+            opacity: 0,
+            duration: 1,
+            ease: "power1.out",
+            stagger:0.5,
+            scrollTrigger:{
+                trigger:hookContainer.current,
+                start:'top top+=20%',
+                end:"bottom top+=20%",
+                toggleActions: "play reverse play reverse",
+            }
+        });
+
+        gsap.from(".title",{
+            scale: "0.2",
+            opacity: 0,
+            duration: 1,
+            ease: "none",
+            delay:0.5
+        });
+    },{ scope: hookContainer });
 
     return(
-        <div className='Hook'>
+        <div className='Hook' ref={hookContainer}>
             <img src={AnimationGif} alt="gif"  className='animation-gif'/>
             <div className='title-container'>
                 <div className='title'>
@@ -17,16 +48,19 @@ const Hook = () => {
             
             <div className="description-container">
                 <div className="description">
-                    {t("descHook1")}<br/>
-                    {t("descHook2")}
-                    <div className="buttons">
-                        <div className="button-contact" >
-                            {t("contactMe")}
-                        </div>
-                        {/*<div className="button-projects" >
-                            Mes projets
-                        </div>*/}
-                    </div>                    
+                    <div className='container-slideIn'>
+                        <span className='slideIn'>{t("descHook1")}</span> 
+                    </div>
+                    <div className='container-slideIn'>
+                        <span className='slideIn'>{t("descHook2")}</span>
+                    </div>
+                    <div className='container-slideIn'>
+                        <div className='buttons slideIn'>
+                            <div className="button-contact" >
+                                {t("contactMe")}
+                            </div>
+                        </div> 
+                    </div>                             
                 </div>
             </div>   
         </div>
