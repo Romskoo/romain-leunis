@@ -4,6 +4,7 @@ import { useRef,useEffect,useState } from "react";
 import Hook from './Hook2/Hook';
 import Presentation from './Presentation/Presentation';
 import Skills from './Skills/Skills';
+import ScrollIcons from './ScrollIcons/ScrollIcons';
 
 const Homepage = () => {
     
@@ -11,6 +12,7 @@ const Homepage = () => {
             <div className="homepage" >
                 <Hook id="hook" />
                 <Presentation />
+                <ScrollIcons />
             </div>
     );
 };

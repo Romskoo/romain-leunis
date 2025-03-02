@@ -1,11 +1,10 @@
 .Hook{
     position: relative;
     display: flex;
-    height: 100vh;
+    min-height: 100vh;
     background-color: #000;
     color: #EEE;
     flex-wrap: wrap;
-    margin-inline: 40px;
 
 
     .container-slideIn{
@@ -54,6 +53,8 @@
         height: 50%;
         flex: 1;
         align-self: self-end;
+        box-sizing: border-box;
+        margin: 50px;
 
         .description{
             font-weight: 400;
@@ -100,5 +101,39 @@
                 }
             }
         }  
+    }
+}
+
+@media (max-width: 800px) {
+    .Hook{     
+        min-height: 100vh;
+        .container-slideIn{
+        }
+
+        .animation-gif{
+        }
+
+        .title-container{
+
+            .title{
+                font-size: 12vw;
+            }
+        }
+
+        .description-container{
+            margin: 30px;
+            .description{
+                font-size: 8vw;
+                max-width: 90%;
+                .buttons{
+
+                    .button-contact{
+                    }
+            
+                    .button-projects{
+                    }
+                }
+            }  
+        }
     }
 }

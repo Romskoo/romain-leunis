@@ -29,12 +29,12 @@ function ParallaxImage({ src, className, parentRef}) {
   }, [src]);
   
   return (
-    <div ref={wrapperRef} className={className} style={{overflow:"hidden"}} >
-      <img
+    <div ref={wrapperRef}  style={{overflow:"hidden"}} >
+      <img 
         ref={imageRef}
         src={src}
         alt="Parallax"
-        style={{ width: "100%",height:"100%", objectFit: "cover", display: "block" }}
+        className={className}
       />
     </div>
   );
