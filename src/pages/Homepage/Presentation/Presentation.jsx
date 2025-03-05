@@ -8,7 +8,6 @@ import PhotoRomain from '../../../assets/romain2.jpg';
 
 import ScrollingText from '../../../components/TextScrollColor/TextScrollAnimation';
 import ParallaxImage from '../../../components/ParallaxImage/ParallaxImage';
-import TextSlideIn from '../../../components/TextSlideIn/TextSlideIn';
 
 gsap.registerPlugin(useGSAP);
 

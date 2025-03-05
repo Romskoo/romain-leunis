@@ -1,28 +1,70 @@
 import './Hook.scss';
-import { memo, useRef } from 'react';
-import Nuage from './Nuage/Nuage';
-import iconArrow from '../../../assets/down-arrow.png'
 
-const Hook = ({id}) => {
-    const animation = useRef();
+import { useRef } from 'react';
+import { useTranslation } from 'react-i18next';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+
+import AnimationGif from '../../../assets/bg-animation3.gif';
+
+gsap.registerPlugin(useGSAP);
+
+const Hook = () => {
+    const { t } = useTranslation();
+    const hookContainer = useRef();
+   
+    useGSAP(() => {
+        gsap.from(".slideIn", {
+            y: "100%",
+            opacity: 0,
+            duration: 1,
+            ease: "power1.out",
+            stagger:0.5,
+            scrollTrigger:{
+                trigger:hookContainer.current,
+                start:'top top+=20%',
+                end:"bottom top+=20%",
+                toggleActions: "play reverse play reverse",
+            }
+        });
+
+        gsap.from(".title",{
+            scale: "0.2",
+            opacity: 0,
+            duration: 1,
+            ease: "none",
+            delay:0.5
+        });
+    },{ scope: hookContainer });
+
     return(
-        <div className='hook home-component' id={id}>
-            <Nuage className='nuage-haut' x={500} ref={animation} />
-            <Nuage className='nuage-bas' x={-500} ref={animation} />
-            <div className='intro-container'>
-                <span className='name'>
-                    Romain Leunis
-                </span>
-                <span className='intro'>
-                    Ingénieur/Développeur full stack
-                </span>
+        <div className='Hook' ref={hookContainer}>
+            <img src={AnimationGif} alt="gif"  className='animation-gif'/>
+            <div className='title-container'>
+                <div className='title'>
+                    {t("fullStackDev")}
+                </div>
             </div>
-            <div className='more-container'>
-                <span>Voir plus</span>
-                <img src={iconArrow} alt="arrow down" className='fleche'/>
-            </div>
+            
+            <div className="description-container">
+                <div className="description">
+                    <div className='container-slideIn'>
+                        <span className='slideIn'>{t("descHook1")}</span> 
+                    </div>
+                    <div className='container-slideIn'>
+                        <span className='slideIn'>{t("descHook2")}</span>
+                    </div>
+                    <div className='container-slideIn'>
+                        <div className='buttons slideIn'>
+                            <div className="button-contact" >
+                                {t("contactMe")}
+                            </div>
+                        </div> 
+                    </div>                             
+                </div>
+            </div>   
         </div>
     )
-}
+};
 
-export default memo(Hook);
+export default Hook;
