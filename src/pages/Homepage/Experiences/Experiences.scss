@@ -8,22 +8,51 @@
 
     .title{
         font-size: 40px;
+        margin-block: 30px;
     }
 
     .Professional{
         display: flex;
-        height: 50%;
+        height: 70%;
+        transform-style:preserve-3d;
+        position: relative;
+        width: 80%;
+        align-items: center;
     }
 
-    .carousel-card {
-        width: 200px;
-        transition: transform 0.3s ease;
-        cursor: pointer;
-        opacity: 0.6;
-      }
+    .card{
+      position:absolute;
+      transform-style:preserve-3d;
+      transition:1s;
+      width: 50vw;
+      min-width: 400px;
+      max-width: 700px;
+      height: 100%;
+      left: 50%;
+      cursor: pointer;
+    }
+ 
+    .card:nth-child(1){
+      transform:translateX(-50%) translateZ(0);
+    }
       
-      .carousel-card.active {
-        transform: scale(1.2); /* Carte active plus grande */
-        opacity: 1;
-      }
+    .card:nth-child(2){
+      transform:translateX(-90%) translateZ(-50px) scale(0.8);
+      opacity: 0.8;
+    }
+      
+    .card:nth-child(3){
+      transform:translateX(-10%) translateZ(-50px) scale(0.8);
+      opacity: 0.8;
+    }
+}
+
+
+@media (max-width: 800px) {
+  .Experiences{
+    .card{
+      min-width: auto;
+      width: 90vw;
+    }
+  }
 }

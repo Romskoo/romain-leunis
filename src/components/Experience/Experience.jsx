@@ -4,8 +4,10 @@ const Experience = ({title,date,description,skills}) => {
 
     return(
         <div className='Experience'>
-            <span className='title'>{title}</span>
-            <span className='date'>{date}</span>
+            <div className='container-top'>
+                <span className='title'>{title}</span>
+                <span className='date'>{date}</span>
+            </div>
             <span className='description'>{description}</span>
             <div className='skills'>
                 {skills.map((skill) => {
