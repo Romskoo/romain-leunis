@@ -90,31 +90,29 @@ const AcaBackground = () => {
 }
 
 const Experiences = () => {
-    const [proSelected,setProSelected] = useState(true);
+    const [proSelected, setProSelected] = useState(true);
 
-    const handleClickPro = () => {
-        setProSelected(true);
-    }
-
-    const handleClickAcademic = () => {
-        setProSelected(false);
-    }
-
-    return(
-        <div className='Experiences'>
-            <div className='container-choices'>
-                <span className={`choice-pro ${proSelected && 'active'}`} onClick={handleClickPro}>Profesionnal</span>
-                <span className={`choice-aca ${!proSelected && 'active'}`} onClick={handleClickAcademic}>Academic</span>
+    return (
+        <div className="Experiences">
+            <div className="container-choices">
+                <span
+                    className={`choice-pro ${proSelected ? "active" : ""}`}
+                    onClick={() => setProSelected(true)}
+                >
+                    Professional
+                </span>
+                <span
+                    className={`choice-aca ${!proSelected ? "active" : ""}`}
+                    onClick={() => setProSelected(false)}
+                >
+                    Academic
+                </span>
+                {/* Barre animée */}
+                <div className={`underline ${proSelected ? "left" : "right"}`}></div>
             </div>
-            <div className='background'>   
-                {proSelected ?
-                    <ProBackground />
-                :
-                    <AcaBackground />
-                }
+            <div className="background">
+                {proSelected ? <ProBackground /> : <AcaBackground />}
             </div>
-            
-            
         </div>
     );
 };
