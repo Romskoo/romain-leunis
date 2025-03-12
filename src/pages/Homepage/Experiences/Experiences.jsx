@@ -8,19 +8,19 @@ const items = [
         title:"CDI - Développeur Full-Stack",
         date:"Stime - De Sep. 2024 à Aujourd'hui",
         description:"à venir",
-        skills:["C#","ReactJs","SQLServer"],
+        skills:["C#","ReactJs","SQLServer","CI/CD"],
     },
     {
         title:"Alternance - Développeur Full-Stack",
         date:"Stime - De Sep. 2020 à Sep. 2024",
         description:"à venir",
-        skills:["C#","ReactJs","SQLServer"]
+        skills:["C#","ReactJs","SQLServer","Winform","WPF"]
     },
     {
-        title:"Stage - Conception/Développement web",
+        title:"Stage internationnal - Conception/Développement web",
         date:"Studio Panepinto - De Juin 2023 à Août 2023",
-        description:"à venir",
-        skills:["NextJs","Figma"]
+        description:"J'ai effectué la création d'un siteweb pour le cabinet dentaire Studio Panepinto à Milan.\n J'ai effectué toutes les phases d'un développement web en autonomie, ainsi que le travail de gestion de projet et satisfaction client.\n En commencant par la création des maquettes sur figma.\n Le développement du site en NextJs avec Tailwind.\n La mise en production sur un VPS OVH avec un reverse proxy Nginx.\n",
+        skills:["NextJs","Tailwind","Figma"]
     }
 ]
 const Experiences = () => {

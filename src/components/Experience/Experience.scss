@@ -28,13 +28,14 @@
    
 
     .description{
-
+        white-space: pre-line;
     }
 
     .skills{
         display: flex;
         gap: 20px;
         flex-wrap: wrap;
+        opacity: 0.8;
 
         .skill{
             border: solid 1px #FFF;
