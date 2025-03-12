@@ -2,6 +2,7 @@
     position: relative;
     display: flex;
     min-height: 100vh;
+    width: 100%;
     background-color: #000;
     color: #EEE;
     flex-wrap: wrap;
@@ -15,17 +16,17 @@
 
     .animation-gif{
         position: absolute;
-        top: 10%;
+        top: 40%;
         left: 50%;
-        width: 50%;
-        transform: translate(-50%);
+        width: 600px;
+        transform: translate(-50%, -50%);
         max-width: 800px;
         min-width: 400px;
     }
 
     .title-container{
         position: absolute;
-        top: 22%;
+        top: 15%;
         left: 50%;
         transform: translate(-50%);
         z-index: 2;
@@ -33,7 +34,7 @@
 
         .title{
             font-family: "JetBrains Mono", monospace;
-            font-size: 9vw;
+            font-size: 100px;
             font-weight: 800;
             z-index: 1;
             line-height: 100%;
@@ -41,7 +42,6 @@
             word-break: keep-all;
             line-break: strict;
             opacity: 0.7;
-            
         }
     }
 
@@ -59,20 +59,40 @@
         .description{
             font-weight: 400;
             line-height: 1.1;
-            font-size: 2vw;
+            font-size: 35px;
             font-family: "Poppins", serif;
             max-width: 80%;
             white-space: normal;
             color: #FFF;
             display: flex;
             flex-direction: column;
+            gap: 20px;
+
+            .container-donnees{
+                display: flex;
+                justify-content: space-between;
+                .donnees{
+                    display: flex;
+                    flex-direction: column;
+                    
+                    .chiffre{
+                        font-size: 70px;
+                        font-weight:600 ;
+                    }
+    
+                    .libelle{
+                        font-size: 25px;
+                        color: #777;
+                    }
+                }
+            }
+            
 
             .buttons{
                 display: flex;
                 justify-content: flex-start;
                 gap: 20px;
                 font-size: 22px;
-                margin-top: 20px;
 
                 .button-contact{
                     background-color: #EEE;
@@ -104,6 +124,18 @@
     }
 }
 
+@media (max-width: 1000px) {
+    .Hook{
+        .animation-gif{}
+
+        .title-container{
+            .title{
+                font-size: 80px;
+            }
+        }
+    }
+}
+
 @media (max-width: 800px) {
     .Hook{     
         min-height: 100vh;
@@ -114,19 +146,40 @@
         }
 
         .title-container{
-
+            width: min-content;
             .title{
-                font-size: 12vw;
+                font-size: 70px;
             }
         }
 
         .description-container{
-            margin: 30px;
-            .description{
-                font-size: 8vw;
-                max-width: 90%;
-                .buttons{
+            margin: 20px;
 
+            .description{
+                font-size: 25px;
+                max-width: 100%;
+
+                .container-donnees{
+                    display: flex;
+                    justify-content: space-between;
+                    .donnees{
+                        display: flex;
+                        flex-direction: column;
+                        
+                        .chiffre{
+                            font-size: 40px;
+                            font-weight:600 ;
+                        }
+        
+                        .libelle{
+                            font-size: 18px;
+                            color: #777;
+                        }
+                    }
+                }
+
+                .buttons{
+                    font-size: 18px;
                     .button-contact{
                     }
             

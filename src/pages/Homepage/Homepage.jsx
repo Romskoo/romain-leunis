@@ -11,10 +11,13 @@ const Homepage = () => {
     
     return (
             <div className="homepage" >
-                <Hook id="hook" />
-                <Presentation />
-                <ScrollIcons />
-                <Experiences />
+                <div className='container-homepage'>
+                    <Hook id="hook" />
+                    <Presentation />
+                    <ScrollIcons />
+                    <Experiences />
+                </div>
+                
             </div>
     );
 };

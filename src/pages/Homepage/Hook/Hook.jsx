@@ -48,8 +48,25 @@ const Hook = () => {
             
             <div className="description-container">
                 <div className="description">
-                    <div className='container-slideIn'>
-                        <span className='slideIn'>{t("descHook1")}</span> 
+                    <div className='container-donnees '>
+                        <div className='container-slideIn '>
+                            <div className='slideIn donnees'>
+                                <span className='chiffre'>+5</span>
+                                <span className='libelle'>Années <br/> d'expérience</span>
+                            </div> 
+                        </div>
+                        <div className='container-slideIn '>
+                            <div className='slideIn donnees'>
+                                <span className='chiffre'>+9</span>
+                                <span className='libelle'>Projets <br/>terminés</span>
+                            </div> 
+                        </div>
+                        <div className='container-slideIn '>
+                            <div className='slideIn donnees'>
+                                <span className='chiffre'>+100</span>
+                                <span className='libelle'>Idées <br/>pour t'aider</span>
+                            </div> 
+                        </div>
                     </div>
                     <div className='container-slideIn'>
                         <span className='slideIn'>{t("descHook2")}</span>

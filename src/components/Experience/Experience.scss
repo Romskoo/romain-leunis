@@ -1,48 +1,129 @@
 .Experience{
     display: flex;
-    flex-direction: column;
     gap: 20px;
-    background-color: #222;
-    padding: 20px;
+    //background-color: #222;
     border-radius: 8px;
-    font-size: 20px;
     height: 100%;
     width: 100%;
     box-sizing: border-box;
-    justify-content: space-between;
 
-    .container-top{
-        display: flex;
-        flex-direction: column;
-        gap: 5px;
-
-        .title{
-            font-size: 30px;
-            margin: 0;
+        .logo{
+            background-color: white;
+            border-radius: 8px;
+            height: 100px;
+            width: 100px;
         }
     
-        .date{
-            color: #AAA;
+
+    .container-body{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        font-size: 20px;
+        height: 100%;
+        width: 100%;
+        justify-content: space-between;
+
+        .container-top{
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+    
+            .title{
+                font-size: 28px;
+                margin: 0;
+                font-weight: 600;
+                text-transform: uppercase;
+            }
+        
+            .date{
+                color: #888;
+                font-size: 16px;
+            }
+        }
+       
+    
+        .description{
+            color: #888;
+            white-space: pre-line;
+            font-size: 18px;
+        }
+    
+        .skills{
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            opacity: 0.8;
+    
+            .skill{
+                border: solid 1px #FFF;
+                border-radius: 30px;
+                padding: 3px;
+                font-size: 12px;
+                padding-inline: 12px;
+            }
         }
     }
-   
+    
+}
 
-    .description{
-        white-space: pre-line;
-    }
-
-    .skills{
+@media (max-width: 800px) {
+    .Experience{
         display: flex;
         gap: 20px;
-        flex-wrap: wrap;
-        opacity: 0.8;
-
-        .skill{
-            border: solid 1px #FFF;
-            border-radius: 30px;
-            padding: 5px;
-            font-size: 15px;
-            padding-inline: 15px;
+        //background-color: #222;
+        border-radius: 8px;
+        height: 100%;
+        width: 100%;
+        box-sizing: border-box;
+        flex-direction: column;
+    
+            .logo{
+                background-color: white;
+                border-radius: 8px;
+                height: 100px;
+                width: 100px;
+            }
+        
+    
+        .container-body{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            font-size: 20px;
+            height: 100%;
+            width: 100%;
+            justify-content: space-between;
+    
+            .container-top{
+        
+                .title{
+                    font-size: 24px;
+                }
+            
+                .date{
+                }
+            }
+           
+        
+            .description{
+            }
+        
+            .skills{
+                display: flex;
+                gap: 10px;
+                flex-wrap: wrap;
+                opacity: 0.8;
+        
+                .skill{
+                    border: solid 1px #FFF;
+                    border-radius: 30px;
+                    padding: 3px;
+                    font-size: 12px;
+                    padding-inline: 12px;
+                }
+            }
         }
+        
     }
 }

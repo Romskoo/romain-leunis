@@ -3,86 +3,118 @@ import Experience from '../../../components/Experience/Experience';
 import { useState, useEffect, useRef } from 'react';
 import gsap from 'gsap';
 
-const items = [
+import LogoStime from '../../../assets/logo-stime.png';
+import LogoPanepinto from '../../../assets/logo-panepinto.webp';
+import LogoEventsw from '../../../assets/logo-eventsw.png';
+
+import LogoEnsiie from '../../../assets/logo-ensiie.jpg';
+import LogoIut from '../../../assets/logo-iut.png';
+import LogoTalma from '../../../assets/logo-versaille.png';
+
+const itemsPro = [
     {
-        title:"CDI - Développeur Full-Stack",
-        date:"Stime - De Sep. 2024 à Aujourd'hui",
-        description:"à venir",
-        skills:["C#","ReactJs","SQLServer","CI/CD"],
+        title:"Stime - Ingénieur logiciel",
+        date:"Sep 2024 - Aujourd'hui",
+        description:"Conception/développement de solutions informatiques variées, application web, logiciel et script d'automatisation.",
+        skills:["C#","ReactJs","Docker","SQLServer","CI/CD","WPF","GitLab"],
+        logo:LogoStime
     },
     {
-        title:"Alternance - Développeur Full-Stack",
-        date:"Stime - De Sep. 2020 à Sep. 2024",
-        description:"à venir",
-        skills:["C#","ReactJs","SQLServer","Winform","WPF"]
+        title:"Studio Panepinto - Web Master",
+        date:"Juin 2023 - Août 2023",
+        description:"Conception/Développement siteweb du cabinet dentaire Studio Panepinto à Milan.\n",
+        skills:["NextJs","Tailwind","Figma","GitHub","English"],
+        logo:LogoPanepinto
     },
     {
-        title:"Stage internationnal - Conception/Développement web",
-        date:"Studio Panepinto - De Juin 2023 à Août 2023",
-        description:"J'ai effectué la création d'un siteweb pour le cabinet dentaire Studio Panepinto à Milan.\n J'ai effectué toutes les phases d'un développement web en autonomie, ainsi que le travail de gestion de projet et satisfaction client.\n En commencant par la création des maquettes sur figma.\n Le développement du site en NextJs avec Tailwind.\n La mise en production sur un VPS OVH avec un reverse proxy Nginx.\n",
-        skills:["NextJs","Tailwind","Figma"]
+        title:"Stime - Apprenti Ingénieur logiciel",
+        date:"Sep 2020 - Sep 2024",
+        description:"Conception/développement de solutions informatiques variées, application web, logiciel et script d'automatisation.",
+        skills:["C#","ReactJs","SQLServer","Winform","WPF","GitLab"],
+        logo:LogoStime
     }
-]
+];
+
+const ProBackground = () => {
+    return(
+        <> 
+            {itemsPro.map((i,index) => {
+                return(
+                    <div key={index}
+                    className="card">
+                        <Experience title={i.title} date={i.date} description={i.description} skills={i.skills} logo={i.logo} />
+                    </div>                        
+                )
+            })}
+        </>
+    )
+}
+
+const itemsAcademic = [
+    {
+        title:"ENSIIE - Diplôme Ingénieur",
+        date:"Sep 2021 - Sep 2024",
+        description:"Parcours alternance à l'école Nationale Supérieure d'Informatique pour l'Industrie et l'Entreprise. Options Informatique Quantique, Green-IT et nouvelles technologies d'entreprise.",
+        skills:["C","Python","Docker","C++","Java","OCaml","GitLab"],
+        logo:LogoEnsiie
+    },
+    {
+        title:"IUT Sénart/Fontainebleau - DUT Informatique",
+        date:"Sep 2019 - Sep 2021",
+        description:"Première année à l'IUT de Sénart en parcours International. Deuxième année à Fontainebleau en parcours Alternance.\n",
+        skills:["Java","C","Assembleur","Kotlin","Bash","Web"],
+        logo:LogoIut
+    },
+    {
+        title:"Lycée Talma - BAC S",
+        date:"Sep 2016 - Juil 2019",
+        description:"Baccalauréat Scientifique SVT avec option ISN(Informatique). Mention Bien.",
+        skills:["Python","HTML","CSS"],
+        logo:LogoTalma
+    }
+];
+
+const AcaBackground = () => {
+    return(
+        <>
+            {itemsAcademic.map((i,index) => {
+                return(
+                    <div key={index}
+                    className="card">
+                        <Experience title={i.title} date={i.date} description={i.description} skills={i.skills} logo={i.logo} />
+                    </div>                        
+                )
+            })}
+        </>
+    )
+}
+
 const Experiences = () => {
-    var cards = document.getElementsByClassName('card'),
-    transforms = [
-        { 
-            x: '-50%',
-            z: 0,
-            scale: 1,
-            opacity: 1
-        },
-        { 
-            x: '-90%',
-            z: '-50px',
-            scale: 0.8,
-            opacity: 0.8
-        },
-        {
-            x: '-10%',
-            z: '-50px',
-            scale: 0.8,
-            opacity: 0.8
-        }
-    ];
+    const [proSelected,setProSelected] = useState(true);
 
-    const nextTransform = (x) => {
-        if (x >= cards.length - 1) {
-            x = 0;
-        } else {
-            x++;
-        }
-        return x;
-    };
-
-    const next = () => {
-        for (let i = 0; i < cards.length; i++) {
-            cards[i].style.transform = 
-            'translateX(' + transforms[nextTransform(i)].x + ')' + 
-            'translateZ(' + transforms[nextTransform(i)].z + ')' +
-            'scale(' + transforms[nextTransform(i)].scale + ')';
-            cards[i].style.opacity = transforms[nextTransform(i)].opacity;
-        }
-        transforms.push(transforms.shift());
+    const handleClickPro = () => {
+        setProSelected(true);
     }
-  
+
+    const handleClickAcademic = () => {
+        setProSelected(false);
+    }
 
     return(
         <div className='Experiences'>
-            <div className='title'>Background</div>
-            <div className='Professional' onClick={next}> 
-                {items.map((i,index) => {
-                    return(
-                        <div key={index}
-                        className="card">
-                            <Experience title={i.title} date={i.date} description={i.description} skills={i.skills}/>
-                        </div>                        
-                    )
-                })}
+            <div className='container-choices'>
+                <span className={`choice-pro ${proSelected && 'active'}`} onClick={handleClickPro}>Profesionnal</span>
+                <span className={`choice-aca ${!proSelected && 'active'}`} onClick={handleClickAcademic}>Academic</span>
             </div>
-            <div className='Academic'>
-                
+            <div className='background'>   
+                {proSelected ?
+                    <ProBackground />
+                :
+                    <AcaBackground />
+                }
             </div>
+            
+            
         </div>
     );
 };

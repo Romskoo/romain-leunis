@@ -1,21 +1,25 @@
 import './Experience.scss';
 
-const Experience = ({title,date,description,skills}) => {
+const Experience = ({title,date,description,skills,logo}) => {
 
     return(
         <div className='Experience'>
-            <div className='container-top'>
-                <span className='title'>{title}</span>
-                <span className='date'>{date}</span>
+            <img src={logo} className='logo' />
+            <div className='container-body'>
+                <div className='container-top'>
+                    <span className='title'>{title}</span>
+                    <span className='date'>{date}</span>
+                </div>
+                <span className='description'>{description}</span>
+                <div className='skills'>
+                    {skills.map((skill) => {
+                        return(
+                            <span className='skill' >{skill}</span>
+                        )
+                    })}
+                </div>
             </div>
-            <pre className='description'>{description}</pre>
-            <div className='skills'>
-                {skills.map((skill) => {
-                    return(
-                        <span className='skill' >{skill}</span>
-                    )
-                })}
-            </div>
+            
         </div>
     )
 };
