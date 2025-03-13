@@ -35,7 +35,7 @@ const Hook = () => {
             ease: "none",
             delay:0.5
         });
-    },{ scope: hookContainer },[]);
+    },{ scope: hookContainer, dependencies:[] });
 
     return(
         <div className='Hook' ref={hookContainer}>

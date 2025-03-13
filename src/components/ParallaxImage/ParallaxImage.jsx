@@ -17,7 +17,7 @@ function ParallaxImage({ src, className, parentRef}) {
       scrollTrigger: {
         trigger: parentRef.current,
         start: "bottom bottom",
-        end: `bottom+=${wrapperHeight*2} bottom`,
+        end: `bottom+=${wrapperHeight} bottom`,
         scrub:true,
       },
     }).to(imageRef.current,{scale:1.2})
@@ -29,7 +29,7 @@ function ParallaxImage({ src, className, parentRef}) {
   }, [src]);
   
   return (
-    <div ref={wrapperRef}  style={{overflow:"hidden", height:"100%", width:"100%"}} >
+    <div ref={wrapperRef}  style={{overflow:"hidden",borderRadius:"10px", height:"100%", width:"100%"}} >
       <img 
         ref={imageRef}
         src={src}
