@@ -20,7 +20,6 @@ const Header = () => {
 
     return(
         <div className='header'>
-            <div className='header-container'>
                 <span className='name' onClick={handleClickLogo}><img src={LogoWhite} alt="rl" className='logo'/>Romain Leunis</span>
                 <LanguagePicker />
                 {/*<div className='container-menu'>
@@ -28,7 +27,6 @@ const Header = () => {
                     <span className='item'>Projets</span>
                     <span className='item'>Contact</span>
                 </div>*/}
-            </div>
         </div>
     )
 }

@@ -35,7 +35,7 @@ const Hook = () => {
             ease: "none",
             delay:0.5
         });
-    },{ scope: hookContainer });
+    },{ scope: hookContainer },[]);
 
     return(
         <div className='Hook' ref={hookContainer}>
@@ -58,7 +58,7 @@ const Hook = () => {
                         <div className='container-slideIn '>
                             <div className='slideIn donnees'>
                                 <span className='chiffre'>+9</span>
-                                <span className='libelle'>Projets <br/>terminés</span>
+                                <span className='libelle'>Projets <br/>réalisés</span>
                             </div> 
                         </div>
                         <div className='container-slideIn '>

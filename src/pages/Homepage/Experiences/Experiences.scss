@@ -3,7 +3,6 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
 
   .container-choices {
       position: relative;
@@ -12,7 +11,7 @@
       color: #555;
       font-weight: 600;
       font-size: 20px;
-      margin-block: 50px;
+      margin-block: 80px;
 
       .choice-pro,
       .choice-aca {
@@ -45,10 +44,16 @@
   }
 
   .background {
-      display: flex;
-      align-items: center;
-      flex-direction: column;
-      gap: 50px;
+      position: relative;
+
+      .background-aca, .background-exp{
+        left: 0;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 50px;
+      }
   }
 
   .card {

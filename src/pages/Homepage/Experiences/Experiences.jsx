@@ -2,6 +2,7 @@ import './Experiences.scss';
 import Experience from '../../../components/Experience/Experience';
 import { useState, useEffect, useRef } from 'react';
 import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
 
 import LogoStime from '../../../assets/logo-stime.png';
 import LogoPanepinto from '../../../assets/logo-panepinto.webp';
@@ -10,6 +11,8 @@ import LogoEventsw from '../../../assets/logo-eventsw.png';
 import LogoEnsiie from '../../../assets/logo-ensiie.jpg';
 import LogoIut from '../../../assets/logo-iut.png';
 import LogoTalma from '../../../assets/logo-versaille.png';
+
+gsap.registerPlugin(useGSAP);
 
 const itemsPro = [
     {
@@ -37,7 +40,7 @@ const itemsPro = [
 
 const ProBackground = () => {
     return(
-        <> 
+        <div className='background-exp'> 
             {itemsPro.map((i,index) => {
                 return(
                     <div key={index}
@@ -46,7 +49,7 @@ const ProBackground = () => {
                     </div>                        
                 )
             })}
-        </>
+        </div>
     )
 }
 
@@ -76,7 +79,7 @@ const itemsAcademic = [
 
 const AcaBackground = () => {
     return(
-        <>
+        <div className='background-aca'>
             {itemsAcademic.map((i,index) => {
                 return(
                     <div key={index}
@@ -85,15 +88,68 @@ const AcaBackground = () => {
                     </div>                        
                 )
             })}
-        </>
+        </div>
     )
 }
 
 const Experiences = () => {
     const [proSelected, setProSelected] = useState(true);
+    const hookContainer = useRef();
+   
+    useGSAP(() => {
+        if(!proSelected){
+            gsap.fromTo(".background-aca", 
+                {
+                    x: "100%",
+                    opacity: 0
+            },{
+                x:"0%",
+                opacity:1,
+                duration: 1,
+                ease: "power1.out",
+            });
+    
+            gsap.fromTo(".background-exp", 
+                {
+                    x: "0%",
+                    opacity: 1
+            },{
+                x:"-100%",
+                opacity:0,
+                duration: 1,
+                ease: "power1.out",
+            });
+        }
+        else{
+            gsap.fromTo(".background-aca", 
+                {
+                    x: "0%",
+                    opacity: 1
+            },{
+                x:"100%",
+                opacity:0,
+                duration: 1,
+                ease: "power1.out",
+            });
+    
+            gsap.fromTo(".background-exp", 
+                {
+                    x: "-100%",
+                    opacity: 0
+            },{
+                x:"0%",
+                opacity:1,
+                duration: 1,
+                ease: "power1.out",
+            });
+        }
+        
+
+        
+    },[proSelected]);
 
     return (
-        <div className="Experiences">
+        <div className="Experiences" ref={hookContainer}>
             <div className="container-choices">
                 <span
                     className={`choice-pro ${proSelected ? "active" : ""}`}
@@ -107,11 +163,11 @@ const Experiences = () => {
                 >
                     Academic
                 </span>
-                {/* Barre animée */}
                 <div className={`underline ${proSelected ? "left" : "right"}`}></div>
             </div>
             <div className="background">
-                {proSelected ? <ProBackground /> : <AcaBackground />}
+                 <ProBackground /> 
+                 <AcaBackground />
             </div>
         </div>
     );
