@@ -25,7 +25,7 @@ const Hook = () => {
             scrollTrigger:{
                 trigger:hookContainer.current,
                 start:'top top+=20%',
-                end:"bottom top+=20%",
+                end:"bottom top",
                 toggleActions: "play reverse play reverse",
             }
         });

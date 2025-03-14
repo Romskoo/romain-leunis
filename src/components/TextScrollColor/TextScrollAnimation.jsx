@@ -22,13 +22,10 @@ export default function ScrollingText({ texte, parentRef }) {
     // Timeline GSAP avec ScrollTrigger
     tl = gsap.timeline({
       scrollTrigger: {
-        trigger: parentRef.current,
-        start: "top top",
-        end: "bottom+=150% top",
-        pin: true,
-        pinSpacing: true, // Ajout de l'espacement pour éviter le chevauchement
-        anticipatePin: 1,
-        scrub: 0.75,
+        trigger:textRef.current,
+        start: "top+=200px bottom",
+        end: "bottom+=300px bottom",
+        scrub: 1
       },
     });
 

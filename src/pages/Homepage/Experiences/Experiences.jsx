@@ -143,9 +143,6 @@ const Experiences = () => {
                 ease: "power1.out",
             });
         }
-        
-
-        
     },[proSelected]);
 
     return (

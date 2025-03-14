@@ -7,13 +7,13 @@ import { useGSAP } from '@gsap/react';
 import PhotoRomain from '../../../assets/romain2.jpg';
 
 import ScrollingText from '../../../components/TextScrollColor/TextScrollAnimation';
-import ParallaxImage from '../../../components/ParallaxImage/ParallaxImage';
 
 gsap.registerPlugin(useGSAP);
 
 const Presentation = () => {
     const { t } = useTranslation();
     const presentationContainer = useRef(null);
+    const imageRef = useRef(null);
    
     useGSAP(() => {
         const parentHeight = presentationContainer.current.offsetHeight;
@@ -32,6 +32,17 @@ const Presentation = () => {
                 }
             });
         });
+
+        gsap.timeline({
+            scrollTrigger: {
+                trigger: imageRef.current,
+                start: "bottom bottom",
+                end: "center center",
+                scrub:3,
+            },
+        })
+        .to(imageRef.current,{scale:1.2});
+
     },{ scope: presentationContainer });
 
     return(
@@ -41,9 +52,7 @@ const Presentation = () => {
                     <span className='slideIn'>{t("whoAmI")}</span>
                 </div>
                 <div className="container-slideIn">
-                    <span className='slideIn'>
-                        <ScrollingText texte={t("descPresentation")} parentRef={presentationContainer}/>
-                    </span>                   
+                    <ScrollingText texte={t("descPresentation")} parentRef={presentationContainer}/>             
                 </div>
                 <div className="container-slideIn">
                     <div className="button-projects slideIn" >
@@ -52,7 +61,7 @@ const Presentation = () => {
                 </div>
             </div>
             <div className="image-container" >
-                <ParallaxImage src={PhotoRomain} alt="Romain" className='image' parentRef={presentationContainer} />
+                <img src={PhotoRomain} ref={imageRef} alt="Romain" className='image'/>
             </div>
         </div>
     )
