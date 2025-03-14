@@ -81,6 +81,7 @@
             font-size: 20px;
             color: #BBB;
             z-index: 2;
+            text-align: center;
         }
 
         .decouvrir{
@@ -104,20 +105,12 @@
     }
 }
 
-@keyframes translate {
-    0% {
-        transform: translateX(0%);
-    }
-    100% {
-        transform: translateX(100%);
-    }
-}
 
-@media (width <= 800px) {
+@media (width <= 1000px) {
     .Introduction{
-        .fullscreen-image{
+        .container-text{
             .titre{
-                font-size: 4em;
+                font-size: 90px;
                 max-width: 90%;
             }   
         }
@@ -125,11 +118,11 @@
     }
 }
 
-@media (width <= 350px) {
+@media (width <= 800px) {
     .Introduction{
-        .fullscreen-image{
+        .container-text{
             .titre{
-                font-size: 3em;
+                font-size: 50px;
                 max-width: 90%;
             }   
         }
