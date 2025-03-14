@@ -8,11 +8,26 @@
         flex: 1 1;
         display: flex;
         justify-content: center;
+
         .icon{
-            height: 10vh;
-            
+            height: 10vh;           
         }
-    }
-    
+    }  
 }
 
+@media (max-width: 800px) {
+    .scroll-icons-container {
+        display: flex;
+        width:200vw;
+
+        .icon-container{
+            flex: 1 1;
+            display: flex;
+            justify-content: center;
+    
+            .icon{
+                height: 7vh;           
+            }
+        }  
+    }
+}
