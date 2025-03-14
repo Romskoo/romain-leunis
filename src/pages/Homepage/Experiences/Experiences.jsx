@@ -98,22 +98,16 @@ const Experiences = () => {
    
     useGSAP(() => {
         if(!proSelected){
-            gsap.fromTo(".background-aca", 
-                {
-                    x: "100%",
-                    opacity: 0
-            },{
-                x:"0%",
+            gsap.to(".background-aca",
+            {
+                x:"-100%",
                 opacity:1,
                 duration: 1,
                 ease: "power1.out",
             });
     
-            gsap.fromTo(".background-exp", 
-                {
-                    x: "0%",
-                    opacity: 1
-            },{
+            gsap.to(".background-exp",
+            {
                 x:"-100%",
                 opacity:0,
                 duration: 1,
@@ -121,22 +115,16 @@ const Experiences = () => {
             });
         }
         else{
-            gsap.fromTo(".background-aca", 
-                {
-                    x: "0%",
-                    opacity: 1
-            },{
-                x:"100%",
+            gsap.to(".background-aca",
+            {
+                x:"0%",
                 opacity:0,
                 duration: 1,
                 ease: "power1.out",
             });
     
-            gsap.fromTo(".background-exp", 
-                {
-                    x: "-100%",
-                    opacity: 0
-            },{
+            gsap.to(".background-exp",
+            {
                 x:"0%",
                 opacity:1,
                 duration: 1,
