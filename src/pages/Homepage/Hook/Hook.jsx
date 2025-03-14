@@ -4,10 +4,12 @@ import { useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import AnimationGif from '../../../assets/bg-animation3.gif';
 
 gsap.registerPlugin(useGSAP);
+gsap.registerPlugin(ScrollTrigger);
 
 const Hook = () => {
     const { t } = useTranslation();
@@ -34,6 +36,17 @@ const Hook = () => {
             duration: 1,
             ease: "none",
             delay:0.5
+        });
+
+        gsap.to(".animation-gif", {
+            y: "80%",
+            ease: "none",
+            scrollTrigger: {
+                trigger: hookContainer.current,
+                start: "top top",
+                end: "bottom top",
+                scrub: 3, 
+            },
         });
     },{ scope: hookContainer, dependencies:[] });
 
