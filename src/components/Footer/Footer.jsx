@@ -3,6 +3,7 @@ import { memo } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import ScrollTrigger from 'gsap/ScrollTrigger';
+import { useTranslation } from 'react-i18next';
 
 import LogoLinkedin from '../../assets/linkedin-white.png';
 import LogoGithub from '../../assets/github.png';
@@ -14,6 +15,8 @@ gsap.registerPlugin(useGSAP);
 gsap.registerPlugin(ScrollTrigger);
 
 const Footer = () => {
+    const {t} = useTranslation();
+
     useGSAP(() => {
         gsap.set('.Footer', { yPercent: -70 })
 
@@ -37,7 +40,7 @@ const Footer = () => {
             <div className='footer-content'>
                 <span className='title'><TypingText text="Romain Leunis" pauseTime={2500}/></span>
                 <div className="contact">
-                    <span>Contact me :</span> <span className='mail'> contact@romain-leunis.fr <img src={IconCopy} className='copy' onClick={() => {navigator.clipboard.writeText("contact@romain-leunis.fr")}}/></span>
+                    <span>{t("contactMe")} :</span> <span className='mail'> contact@romain-leunis.fr <img src={IconCopy} className='copy' onClick={() => {navigator.clipboard.writeText("contact@romain-leunis.fr")}}/></span>
                     
                 </div>
                 <div className="socials">
@@ -45,7 +48,7 @@ const Footer = () => {
                     <a href="https://github.com/Romskoo" target='_blank'><img src={LogoGithub} className='icon' /></a>
                 </div>
                 <div className="madeBy">
-                    <span>Made by <span className='primary'>ME</span> |</span>
+                    <span>{t("madeBy")} <span className='primary'>{t("me")}</span> |</span>
                     <span>© 2025 Romain Leunis</span>
                 </div>
                
