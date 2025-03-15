@@ -59,7 +59,6 @@ const ScrollIcons = () => {
 
 function horizontalLoop(items, config) {
     items = gsap.utils.toArray(items);
-    console.log(items)
     config = config || {};
     let tl = gsap.timeline({repeat: config.repeat, paused: config.paused, defaults: {ease: "none"}, onReverseComplete: () => tl.totalTime(tl.rawTime() + tl.duration() * 100)}),
       length = items.length,

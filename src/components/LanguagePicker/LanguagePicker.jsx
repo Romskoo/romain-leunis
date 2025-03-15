@@ -14,7 +14,6 @@ const LanguagePicker = () => {
     const languages = [
         { code: "en", label: "🇬🇧 English" },
         { code: "fr", label: "🇫🇷 Français" },
-        { code: "es", label: "🇪🇸 Español" },
     ];
 
     const changeLanguage = (lng) => {
