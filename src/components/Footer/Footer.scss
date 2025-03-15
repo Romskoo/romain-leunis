@@ -24,7 +24,14 @@
             display: flex;
             gap: 10px;
             align-items: center;
+            flex-wrap: wrap;
 
+            .mail{
+                display: flex;
+                gap: 10px;
+                align-items: center;
+                flex-wrap: wrap;
+            }
             .copy{
                 height: 20px;
                 cursor: pointer;
@@ -57,11 +64,22 @@
     }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
     .Footer{
         .footer-content{
             .title{
                 font-size: 90px;
+            }
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    .Footer{
+        .footer-content{
+            align-items: start;
+            .title{
+                font-size: 50px;
             }
         }
     }

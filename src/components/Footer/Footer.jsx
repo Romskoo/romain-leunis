@@ -37,8 +37,8 @@ const Footer = () => {
             <div className='footer-content'>
                 <span className='title'><TypingText text="Romain Leunis" pauseTime={2500}/></span>
                 <div className="contact">
-                    <span>Contact me : contact@romain-leunis.fr</span>
-                    <img src={IconCopy} className='copy' onClick={() => {navigator.clipboard.writeText("contact@romain-leunis.fr")}}/>
+                    <span>Contact me :</span> <span className='mail'> contact@romain-leunis.fr <img src={IconCopy} className='copy' onClick={() => {navigator.clipboard.writeText("contact@romain-leunis.fr")}}/></span>
+                    
                 </div>
                 <div className="socials">
                     <a href="https://www.linkedin.com/in/romain-leunis/" target='_blank'><img src={LogoLinkedin} className='icon'/></a>
