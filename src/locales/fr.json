@@ -1,11 +1,45 @@
 {
-    "introduction":"Conception & Développement de solutions informatiques.",
-    "discover":"Découvrir",
-    "fullStackDev":"Ingénieur Logiciel",
-    "contactMe":"Me contacter",
-    "descHook1":"Jeune développeur passionné de technologie, de sport et d’entreprenariat.",
-    "descHook2":"Une nouvelle opportunité ? Contacte moi",
-    "myWork":"Mes projets",
-    "descPresentation":"Diplomé de l'école d'ingénieur ENSIIE spécialisée dans les systèmes d'information. Je travaille depuis 5 ans dans le secteur de la grande distribution au sein de la STIME.",
-    "whoAmI":"Qui je suis ?"
+    "introduction": "Conception & Développement de solutions informatiques.",
+    "discover": "Découvrir",
+    "software": "Ingénieur ",
+    "engineer":"Logiciel",
+    "contactMe": "Me contacter",
+    "descHook1": "Jeune développeur passionné de technologie, de sport et d’entreprenariat.",
+    "descHook2": "Une nouvelle opportunité? ",
+    "myWork": "Mes projets",
+    "descPresentation": "Diplômé de l'école d'ingénieur ENSIIE spécialisée dans les systèmes d'information. Je travaille depuis 5 ans dans le secteur de la grande distribution au sein de la STIME.",
+    "whoAmI": "Qui je suis ?",
+    "years":"Années",
+    "ofExperience":"d'expérience",
+    "projects":"Projets",
+    "achieved":"réalisés",
+    "ideas":"Idées",
+    "toHelpYou":"pour t'aider",
+
+    "professional":"Professionnel",
+    "academic":"Académique",
+
+    "academicTitle1": "ENSIIE - Diplôme Ingénieur",
+    "academicDate1": "Sep 2021 - Sep 2024",
+    "academicDesc1": "Parcours alternance à l'École Nationale Supérieure d'Informatique pour l'Industrie et l'Entreprise. Options Informatique Quantique, Green-IT et nouvelles technologies d'entreprise.",
+
+    "academicTitle2": "IUT Sénart/Fontainebleau - DUT Informatique",
+    "academicDate2": "Sep 2019 - Sep 2021",
+    "academicDesc2": "Première année à l'IUT de Sénart en parcours International. Deuxième année à Fontainebleau en parcours Alternance.",
+
+    "academicTitle3": "Lycée Talma - BAC S",
+    "academicDate3": "Sep 2016 - Juil 2019",
+    "academicDesc3": "Baccalauréat Scientifique SVT avec option ISN (Informatique). Mention Bien.",
+
+    "proTitle1": "Stime - Ingénieur logiciel",
+    "proDate1": "Sep 2024 - Aujourd'hui",
+    "proDesc1": "Conception/développement de solutions informatiques variées : applications web, logiciels et scripts d'automatisation.",
+
+    "proTitle2": "Studio Panepinto - Web Master",
+    "proDate2": "Juin 2023 - Août 2023",
+    "proDesc2": "Conception/Développement du site web du cabinet dentaire Studio Panepinto à Milan.",
+
+    "proTitle3": "Stime - Apprenti Ingénieur logiciel",
+    "proDate3": "Sep 2020 - Sep 2024",
+    "proDesc3": "Conception/développement de solutions informatiques variées : applications web, logiciels et scripts d'automatisation."
 }

@@ -38,7 +38,7 @@ const LanguagePicker = () => {
     return (
         <div className="language-picker" ref={dropdownRef}>
             <button className="dropdown-button" onClick={() => setIsOpen(!isOpen)}>
-                <img src={IconLanguageWhite} alt="world" className="icon-language"/> {i18n.language.toUpperCase()} ▼
+                <img src={IconLanguageWhite} alt="world" className="icon-language"/> {i18n.language.split("-")[0].toUpperCase()} ▼
             </button>
             {isOpen && (
                 <ul className="dropdown-menu" >

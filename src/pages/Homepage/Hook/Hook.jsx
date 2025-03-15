@@ -55,7 +55,7 @@ const Hook = () => {
             <img src={AnimationGif} alt="gif"  className='animation-gif'/>
             <div className='title-container'>
                 <div className='title'>
-                    {t("fullStackDev")}
+                    {t("software")}<span className='primary'>{t("engineer")}</span>
                 </div>
             </div>
             
@@ -65,24 +65,24 @@ const Hook = () => {
                         <div className='container-slideIn '>
                             <div className='slideIn donnees'>
                                 <span className='chiffre'>+5</span>
-                                <span className='libelle'>Années <br/> d'expérience</span>
+                                <span className='libelle'>{t("years")} <br/>{t("ofExperience")}</span>
                             </div> 
                         </div>
                         <div className='container-slideIn '>
                             <div className='slideIn donnees'>
                                 <span className='chiffre'>+9</span>
-                                <span className='libelle'>Projets <br/>réalisés</span>
+                                <span className='libelle'>{t("projects")} <br/>{t("achieved")}</span>
                             </div> 
                         </div>
                         <div className='container-slideIn '>
                             <div className='slideIn donnees'>
                                 <span className='chiffre'>+100</span>
-                                <span className='libelle'>Idées <br/>pour t'aider</span>
+                                <span className='libelle'>{t("ideas")} <br/>{t("toHelpYou")}</span>
                             </div> 
                         </div>
                     </div>
                     <div className='container-slideIn'>
-                        <span className='slideIn'>{t("descHook2")}</span>
+                        <span className='slideIn'>{t("descHook2")}<span className='primary'>{t("contactMe")}</span></span>
                     </div>
                     <div className='container-slideIn'>
                         <div className='buttons slideIn'>

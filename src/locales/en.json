@@ -1,11 +1,45 @@
 {
-    "introduction":"Conception & Development of IT solutions.",
-    "discover":"Discover",
-    "fullStackDev":"Software Engineer",
-    "contactMe":"Contact me",
-    "descHook1":"Young developer passionate by technologies, sports and entrepreneurship.",
-    "descHook2":"New opportunity ? Contact me",
-    "myWork":"My work",
-    "descPresentation":"I graduated from ENSIIE engineering school, specialized in information systems. I have been working for five years in the retail sector at STIME.",
-    "whoAmI":"Who am I ?"
+    "introduction": "Design & Development of IT solutions.",
+    "discover": "Discover",
+    "software": "Software ",
+    "engineer":"Engineer",
+    "contactMe": "Contact Me",
+    "descHook1": "Young developer passionate about technology, sports, and entrepreneurship.",
+    "descHook2": "A new opportunity? ",
+    "myWork": "My projects",
+    "descPresentation": "Graduate of the ENSIIE engineering school specializing in information systems. I have been working for 5 years in the retail sector at STIME.",
+    "whoAmI": "Who am I?",
+    "years":"Years of",
+    "ofExperience":"experience",
+    "projects":"Projects",
+    "achieved":"achieved",
+    "ideas":"Ideas to",
+    "toHelpYou":"help you",
+
+    "professional":"Professional",
+    "academic":"Academic",
+
+    "academicTitle1": "ENSIIE - Engineering Degree",
+    "academicDate1": "Sep 2021 - Sep 2024",
+    "academicDesc1": "Work-study program at the National School of Computer Science for Industry and Business. Specializations in Quantum Computing, Green-IT, and Emerging Enterprise Technologies.",
+
+    "academicTitle2": "IUT Sénart/Fontainebleau - Computer Science DUT",
+    "academicDate2": "Sep 2019 - Sep 2021",
+    "academicDesc2": "First year at IUT Sénart in the International track. Second year in Fontainebleau in the Work-Study program.",
+
+    "academicTitle3": "Lycée Talma - Science Baccalaureate",
+    "academicDate3": "Sep 2016 - Jul 2019",
+    "academicDesc3": "Scientific Baccalaureate in Life and Earth Sciences with an ISN (Computer Science) option. Honors: Bien (Good).",
+
+    "proTitle1": "Stime - Software Engineer",
+    "proDate1": "Sep 2024 - Present",
+    "proDesc1": "Design/development of various IT solutions: web applications, software, and automation scripts.",
+
+    "proTitle2": "Studio Panepinto - Web Master",
+    "proDate2": "June 2023 - August 2023",
+    "proDesc2": "Design/Development of the website for the dental practice Studio Panepinto in Milan.",
+
+    "proTitle3": "Stime - Software Engineer Apprentice",
+    "proDate3": "Sep 2020 - Sep 2024",
+    "proDesc3": "Design/development of various IT solutions: web applications, software, and automation scripts."
 }

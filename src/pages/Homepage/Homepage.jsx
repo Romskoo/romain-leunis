@@ -6,6 +6,8 @@ import Presentation from './Presentation/Presentation';
 import Skills from './Skills/Skills';
 import ScrollIcons from './ScrollIcons/ScrollIcons';
 import Experiences from './Experiences/Experiences';
+import MaskFooter from './MaskFooter/MaskFooter';
+import Footer from '../../components/Footer/Footer';
 
 const Homepage = () => {
     
@@ -15,9 +17,8 @@ const Homepage = () => {
                     <Hook id="hook" />
                     <Presentation />
                     <ScrollIcons />
-                    <Experiences />
+                    <Experiences />                   
                 </div>
-                
             </div>
     );
 };
