@@ -12,9 +12,9 @@ const Experience = ({title,date,description,skills,logo}) => {
                 </div>
                 <span className='description'>{description}</span>
                 <div className='skills'>
-                    {skills.map((skill) => {
+                    {skills.map((skill,index) => {
                         return(
-                            <span className='skill' >{skill}</span>
+                            <span className='skill' key={index}>{skill}</span>
                         )
                     })}
                 </div>

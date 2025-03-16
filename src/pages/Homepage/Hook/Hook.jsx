@@ -7,6 +7,7 @@ import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import AnimationGif from '../../../assets/bg-animation3.gif';
+import IconCopy from '../../../assets/copying.png';
 
 gsap.registerPlugin(useGSAP);
 gsap.registerPlugin(ScrollTrigger);
@@ -84,15 +85,20 @@ const Hook = () => {
                     <div className='container-slideIn'>
                         <span className='slideIn'>{t("descHook2")}<span className='primary'>{t("contactMe")}</span></span>
                     </div>
-                    <div className='container-slideIn'>
+                    <div className='container-slideIn'>                      
                         <div className='buttons slideIn'>
-                            <div className="button-contact" >
-                                {t("contactMe")}
+                            <span className='click'>{t("clickToCopy")} ➔</span>
+                            <div className="button-contact" onClick={() => {navigator.clipboard.writeText("contact@romain-leunis.fr")}}>
+                                contact@romain-leunis.fr
                             </div>
                         </div> 
-                    </div>                             
+                    </div>  
+                                            
                 </div>
             </div>   
+            {/*<div className='popUp-contact'>
+                <span className='mail'> contact@romain-leunis.fr <img src={IconCopy} className='copy' alt='copy' onClick={() => {navigator.clipboard.writeText("contact@romain-leunis.fr")}}/></span>
+            </div>  */}
         </div>
     )
 };

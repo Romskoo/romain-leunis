@@ -4,6 +4,7 @@ import Hook from './Hook/Hook';
 import Presentation from './Presentation/Presentation';
 import ScrollIcons from './ScrollIcons/ScrollIcons';
 import Experiences from './Experiences/Experiences';
+import Projects from './Projects/Projects';
 
 const Homepage = () => {
     
@@ -13,7 +14,8 @@ const Homepage = () => {
                     <Hook id="hook" />
                     <Presentation />
                     <ScrollIcons />
-                    <Experiences />                   
+                    <Experiences />  
+                    <Projects />                 
                 </div>
             </div>
     );

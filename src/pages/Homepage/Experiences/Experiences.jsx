@@ -1,13 +1,12 @@
 import './Experiences.scss';
 import Experience from '../../../components/Experience/Experience';
-import { useState, useEffect, useRef } from 'react';
+import { useState, useRef } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { useTranslation } from 'react-i18next';
 
 import LogoStime from '../../../assets/logo-stime.png';
 import LogoPanepinto from '../../../assets/logo-panepinto.webp';
-import LogoEventsw from '../../../assets/logo-eventsw.png';
 
 import LogoEnsiie from '../../../assets/logo-ensiie.jpg';
 import LogoIut from '../../../assets/logo-iut.png';

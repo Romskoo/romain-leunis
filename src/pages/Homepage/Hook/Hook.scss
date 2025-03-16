@@ -90,8 +90,13 @@
             .buttons{
                 display: flex;
                 justify-content: flex-start;
+                align-items: center;
                 gap: 20px;
                 font-size: 22px;
+
+                .click{
+                    color: #777;
+                }
 
                 .button-contact{
                     background-color: #EEE;
@@ -120,6 +125,23 @@
                 }
             }
         }  
+    }
+
+    .popUp-contact{
+        position: fixed;
+        background-color: #222;
+        height: 50%;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        z-index: 10;
+        width: 50%;
+
+        .mail{
+            .copy{
+                height: 25px;
+            }
+        }
     }
 }
 

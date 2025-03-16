@@ -1,0 +1,17 @@
+.Projects{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-block: 50px;
+
+    .container-project{
+        display: flex;
+        gap: 20px;
+    }
+
+    .title{
+        color: #FFF;
+        font-size: 60px;
+        font-weight: 500;
+    }
+}
