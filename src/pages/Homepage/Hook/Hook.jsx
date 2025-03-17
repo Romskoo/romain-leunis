@@ -1,6 +1,6 @@
 import './Hook.scss';
 
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
@@ -15,6 +15,15 @@ gsap.registerPlugin(ScrollTrigger);
 const Hook = () => {
     const { t } = useTranslation();
     const hookContainer = useRef();
+    const [clickCopy,setClickCopy] = useState(false);
+
+    const handleClickCopy = () => {
+        navigator.clipboard.writeText("contact@romain-leunis.fr");
+        setClickCopy(true);
+        setTimeout(() => {
+            setClickCopy(false);
+        },1000);
+    }
    
     useGSAP(() => {
         gsap.from(".slideIn", {
@@ -87,9 +96,10 @@ const Hook = () => {
                     </div>
                     <div className='container-slideIn'>                      
                         <div className='buttons slideIn'>
-                            <span className='click'>{t("clickToCopy")} ➔</span>
-                            <div className="button-contact" onClick={() => {navigator.clipboard.writeText("contact@romain-leunis.fr")}}>
-                                contact@romain-leunis.fr
+                            {/*<span className='click'>{t("clickToCopy")} ➔</span>*/}
+                            <div className="button-contact" onClick={handleClickCopy}>
+                                <span className={`libelle-contact ${!clickCopy && "active"}`}>contact@romain-leunis.fr</span>
+                                <span className={`libelle-contact ${clickCopy && "active"}`}>Copié!</span>
                             </div>
                         </div> 
                     </div>  

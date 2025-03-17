@@ -105,6 +105,16 @@
                     padding-block: 10px;
                     border-radius: 8px;
                     cursor: pointer;
+                    width: 350px;
+                    text-align: center;
+
+                    .libelle-contact{
+                        display: none;
+                    }
+
+                    .active{
+                        display: block;
+                    }
                 }
 
                 .button-contact:hover{
@@ -174,7 +184,8 @@
         }
 
         .description-container{
-            margin: 20px;
+            margin: unset;
+            margin-block: 20px;
 
             .description{
                 font-size: 25px;
@@ -202,6 +213,7 @@
                 .buttons{
                     font-size: 18px;
                     .button-contact{
+                        width: 250px;
                     }
             
                     .button-projects{
