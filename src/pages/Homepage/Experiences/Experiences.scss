@@ -7,7 +7,7 @@
   .container-choices {
       position: relative;
       display: flex;
-      gap: 30px;
+      gap: 20px;
       color: #555;
       font-weight: 600;
       font-size: 20px;
@@ -17,6 +17,8 @@
       .choice-aca {
           cursor: pointer;
           padding-block: 5px;
+          width: 140px;
+          text-align: center;
       }
 
       .active {
@@ -28,7 +30,7 @@
           position: absolute;
           bottom: -2px;
           left: 0;
-          width: 120px; /* Ajuste selon la taille du texte */
+          width: 140px; /* Ajuste selon la taille du texte */
           height: 2px;
           background-color: #da124e;
           transition: transform 0.3s ease-in-out;
@@ -39,7 +41,7 @@
       }
 
       .right {
-          transform: translateX(135px); /* Ajuste selon l'espacement */
+          transform: translateX(160px); /* Ajuste selon l'espacement */
       }
   }
 
