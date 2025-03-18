@@ -5,6 +5,7 @@ import ImgEventsw from '../../../assets/eventsw.png';
 import ImgPanepinto from '../../../assets/panepinto.png';
 import ImgMavie from '../../../assets/mavie.png';
 import ImgTrombi from '../../../assets/trombi.png';
+import ImgFlexApp from '../../../assets/flexapp.png';
 
 const Projects = () => {
     return(
@@ -15,7 +16,7 @@ const Projects = () => {
                 <Project img={ImgPanepinto} nom="Studio Panepinto" dark={false} />
                 <Project img={ImgMavie} nom="Ma Vie Mousquetaires" dark={true} />              
                 <Project img={ImgTrombi} nom="Trombinoscope Mousquetaires" dark={false} />
-                <Project img={ImgEventsw} nom="EventSW" dark={true} />
+                <Project img={ImgFlexApp} nom="Flex App" dark={true} />
                 <Project img={ImgPanepinto} nom="Studio Panepinto" dark={false} />
             </div>
             
