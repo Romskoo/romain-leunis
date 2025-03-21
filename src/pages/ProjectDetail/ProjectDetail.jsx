@@ -1,8 +1,10 @@
 import './ProjectDetail.scss';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 
 const ProjectDetail = () => {
+    const {t} = useTranslation();
     const location = useLocation();
     const navigate = useNavigate();
     const project = location.state;
@@ -13,35 +15,35 @@ const ProjectDetail = () => {
     },[location]);
 
     const handleClickRetour = () => {
-        navigate("/home");
+        navigate(-1);
     }
 
     return(
         <div className="container-ProjectDetail">
             <div className="ProjectDetail">
-                <span className='retour' onClick={handleClickRetour}>Retour</span>
+                <span className='retour' onClick={handleClickRetour}>{t("return")}</span>
                 <span className="title">
-                    {project.title}
+                    {t(`${project.libelle}-title`)}
                 </span>
                 <div className="container-role">
                     <span className="company">
-                        {project.company}
+                    {t(`${project.libelle}-company`)}
                     </span>
                     <span className="role">
-                        {project.role}
+                    {t(`${project.libelle}-role`)}
                     </span>
                 </div>
                 <div className="container-content">
                     <div className="container-desc">
-                        <span className="title">My role</span>
+                        <span className="title">{t("myRole")}</span>
                         <span className="desc">
-                            {project.description}
+                        {t(`${project.libelle}-description`)}
                         </span>
                         <div className="container-techno">
-                            {project.technos.map((t) => {
+                            {project.technos.map((tech) => {
                                 return(
                                     <div className="techno">
-                                        {t}
+                                        {tech}
                                     </div>
                                 )
                             })}

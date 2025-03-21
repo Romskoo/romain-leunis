@@ -21,6 +21,9 @@
 
     "professional":"Professional",
     "academic":"Academic",
+    "selectedWork":"Selected work",
+    "myRole":"My role",
+    "return":"return",
 
     "academicTitle1": "ENSIIE - Engineering Degree",
     "academicDate1": "Sep 2021 - Sep 2024",
@@ -44,5 +47,36 @@
 
     "proTitle3": "Stime - Software Engineer Apprentice",
     "proDate3": "Sep 2020 - Sep 2024",
-    "proDesc3": "Design/development of various IT solutions: web applications, software, and automation scripts."
+    "proDesc3": "Design/development of various IT solutions: web applications, software, and automation scripts.",
+
+    "itemEventSW-title": "Street workout event forum.",
+    "itemEventSW-company": "EventSW",
+    "itemEventSW-role": "CEO",
+    "itemEventSW-description": "Design and development of the project. I completed this project alone, working on all aspects that a project has to offer: creating the idea and functional requirements, designing the visual identity and wireframes, developing the backend and frontend, setting up CI/CD to automate deployment, and managing production (configuring the Nginx reverse proxy, DNS redirection, and creating the SMTP server).",
+
+    "itemStudioPanepinto-title": "Showcase website for a dental office.",
+    "itemStudioPanepinto-company": "Studio Panepinto",
+    "itemStudioPanepinto-role": "Web Master",
+    "itemStudioPanepinto-description": "Design and development of the website. I carried out this project independently. I was able to experience all phases of project management and development: gathering and documenting requirements with the client, designing wireframes, developing the website, iterative work to best meet expectations, deployment, and production management (configuring the Nginx reverse proxy, DNS redirection).",
+    
+    "itemMavie-title": "Portal for the CEOs of the Groupement des Mousquetaires.",
+    "itemMavie-company": "Stime, Groupement des Mousquetaires",
+    "itemMavie-role": "Full-stack developer",
+    "itemMavie-description": "Website development. I was responsible for frontend development and worked on the backend within a team of 5 people. I also participated in business requirements discussions and refinements. I worked closely with clients and designers, supporting wireframe design, developing the frontend, and occasionally contributing to the backend.",
+
+    "itemTrombi-title": "CEO and store directory for the Groupement des Mousquetaires.",
+    "itemTrombi-company": "Stime, Groupement des Mousquetaires",
+    "itemTrombi-role": "Full-stack developer",
+    "itemTrombi-description": "Website development. I was responsible for frontend development and worked on the backend within a team of 5 people. I also participated in business requirements discussions and refinements. I worked closely with clients and designers, supporting wireframe design, developing the frontend, and occasionally contributing to the backend.",
+
+    "itemFlexApp-title": "PWA web application for flex office management.",
+    "itemFlexApp-company": "Stime, Groupement des Mousquetaires",
+    "itemFlexApp-role": "Full-stack developer",
+    "itemFlexApp-description": "Development of the web application. I was responsible for backend development and contributed to the frontend within a team of 3 people. I also participated in business requirements discussions and refinements. I worked closely with clients and designers, supporting wireframe design, developing the backend, and occasionally contributing to the frontend.",
+
+    "itemRestaurant-title": "Website template for restaurants.",
+    "itemRestaurant-company": "Personal project",
+    "itemRestaurant-role": "CEO",
+    "itemRestaurant-description": "Website development. I worked on this project alone, handling both design and desktop/mobile integration."
+
 }
