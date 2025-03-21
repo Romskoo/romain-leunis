@@ -1,67 +1,69 @@
 .Experiences {
-  min-height: 100vh;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    margin-block: 50px;
 
-  .container-choices {
-      position: relative;
-      display: flex;
-      gap: 20px;
-      color: #555;
-      font-weight: 600;
-      font-size: 20px;
-      margin-block: 80px;
+    .container-choices {
+        position: relative;
+        display: flex;
+        gap: 20px;
+        color: #555;
+        font-weight: 600;
+        font-size: 20px;
+        margin-block: 80px;
 
-      .choice-pro,
-      .choice-aca {
-          cursor: pointer;
-          padding-block: 5px;
-          width: 140px;
-          text-align: center;
-      }
+        .choice-pro,
+        .choice-aca {
+            cursor: pointer;
+            padding-block: 5px;
+            width: 140px;
+            text-align: center;
+        }
 
-      .active {
-          color: #FFF;
-      }
+        .active {
+            color: #FFF;
+        }
 
-      /* Barre animée */
-      .underline {
-          position: absolute;
-          bottom: -2px;
-          left: 0;
-          width: 140px; /* Ajuste selon la taille du texte */
-          height: 2px;
-          background-color: #da124e;
-          transition: transform 0.3s ease-in-out;
-      }
+        /* Barre animée */
+        .underline {
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 140px; /* Ajuste selon la taille du texte */
+            height: 2px;
+            background-color: #da124e;
+            transition: transform 0.3s ease-in-out;
+        }
 
-      .left {
-          transform: translateX(0);
-      }
+        .left {
+            transform: translateX(0);
+        }
 
-      .right {
-          transform: translateX(160px); /* Ajuste selon l'espacement */
-      }
+        .right {
+            transform: translateX(160px); /* Ajuste selon l'espacement */
+        }
   }
 
   .background {
-      position: relative;
-      display: flex;
-      width: 200%;
-
-      .background-aca, .background-exp{
+        position: relative;
         display: flex;
-        align-items: center;
-        flex-direction: column;
-        gap: 50px;
-        width: 50%;
-      }
-  }
+        width: 200%;
 
-  .card {
-      width: 100%;
-  }
+        .background-aca, .background-exp{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            gap: 50px;
+            width: 50%;
+        }
+    }
+
+    .card {
+        width: 100%;
+    }
 }
 
 

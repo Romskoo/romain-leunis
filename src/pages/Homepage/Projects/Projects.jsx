@@ -1,6 +1,9 @@
 import './Projects.scss';
+import { useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
 
 import Project from '../../../components/Project/Project';
 
@@ -16,6 +19,8 @@ import ImgFlexApp from '../../../assets/flexapp.png';
 import ImgFlexAppMobile from '../../../assets/flexapp-mobile.png';
 import ImgRestaurant from '../../../assets/restaurant.png';
 import ImgRestaurantMobile from '../../../assets/restaurant-mobile.png';
+
+gsap.registerPlugin(useGSAP);
 
 const Projects = () => {
     const navigate = useNavigate();
@@ -61,16 +66,52 @@ const Projects = () => {
         navigate('/project',{state:item})
     }
 
+    const projectsContainer = useRef(null);
+
+    useGSAP(() => {
+        const parentHeight = projectsContainer.current.offsetHeight;
+
+        gsap.utils.toArray(".slideIn").forEach((element) => {
+            gsap.from(element, {
+                y: "100%",
+                opacity: 0,
+                duration: 1,
+                ease: "power1.out",
+                scrollTrigger: {
+                    trigger: element,
+                    start: "top 90%",
+                    end:`top+=${parentHeight*1.5} top`,
+                    toggleActions: "play reverse play reverse"
+                }
+            });
+        });
+
+    },{scope:projectsContainer, dependencies:[]});
+
     return(
-        <div className="Projects">
-            <span className='title'>{t("selectedWork")}</span>
+        <div className="Projects" ref={projectsContainer}>
+            <div className='container-slideIn'>
+                <span className='title slideIn'>{t("selectedWork")}</span>
+            </div>
             <div className="container-project">
-                <Project img={ImgEventsw} nom="EventSW" dark={true} onClick={() => handleClickProject(itemEventSW)}/>
-                <Project img={ImgPanepinto} nom="Studio Panepinto" dark={false} onClick={() => handleClickProject(itemStudioPanepinto)}/>
-                <Project img={ImgMavie} nom="Ma Vie Mousquetaires" dark={true} onClick={() => handleClickProject(itemMavie)} />              
-                <Project img={ImgTrombi} nom="Trombinoscope Mousquetaires" dark={false} onClick={() => handleClickProject(itemTrombi)} />
-                <Project img={ImgFlexApp} nom="Flex App" dark={true} onClick={() => handleClickProject(itemFlexApp)}/>
-                <Project img={ImgRestaurant} nom="Template restaurant" dark={false} onClick={() => handleClickProject(itemRestaurant)}/>
+                <div className='container-slideIn'>
+                    <Project img={ImgEventsw} nom="EventSW" dark={true} onClick={() => handleClickProject(itemEventSW)} className="slideIn"/>
+                </div>
+                <div className='container-slideIn'>
+                    <Project img={ImgPanepinto} nom="Studio Panepinto" dark={false} onClick={() => handleClickProject(itemStudioPanepinto)} className="slideIn"/>
+                </div>
+                <div className='container-slideIn'>
+                    <Project img={ImgMavie} nom="Ma Vie Mousquetaires" dark={true} onClick={() => handleClickProject(itemMavie)} className="slideIn"/>
+                </div>
+                <div className='container-slideIn'>          
+                    <Project img={ImgTrombi} nom="Trombinoscope Mousquetaires" dark={false} onClick={() => handleClickProject(itemTrombi)} className="slideIn"/>
+                </div>
+                <div className='container-slideIn'>
+                    <Project img={ImgFlexApp} nom="Flex App" dark={true} onClick={() => handleClickProject(itemFlexApp)} className="slideIn"/>
+                </div>
+                <div className='container-slideIn'>
+                    <Project img={ImgRestaurant} nom="Template restaurant" dark={false} onClick={() => handleClickProject(itemRestaurant)} className="slideIn"/>
+                </div>
             </div>           
         </div>
     );

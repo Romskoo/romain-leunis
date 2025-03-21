@@ -4,6 +4,14 @@
     gap: 20px;
     padding-block: 50px;
     width: 100%;
+    box-sizing: border-box;
+    margin-block: 50px;
+
+    .container-slideIn{
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;  
+    }
 
     .container-project{
         width: 100%;
@@ -19,4 +27,17 @@
         font-weight: 500;
         font-family: "Poppins", serif;
     }
+}
+
+@media (max-width: 1000px) {
+    .Projects{
+    
+        .container-project{
+        }
+    
+        .title{
+            font-size: 40px;
+        }
+    }
+    
 }

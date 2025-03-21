@@ -1,13 +1,36 @@
 import './ProjectDetail.scss';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+
+gsap.registerPlugin(useGSAP);
 
 const ProjectDetail = () => {
     const {t} = useTranslation();
     const location = useLocation();
     const navigate = useNavigate();
     const project = location.state;
+    const containerProject = useRef(null);
+
+    useGSAP(() => {
+        gsap.from(".image",{
+            opacity:0,
+            delay:1,
+            duration:4,
+            ease:"none"
+        });
+
+        gsap.utils.toArray(".slideIn").forEach((element) => {
+            gsap.from(element, {
+                y: "100%",
+                opacity: 0,
+                duration: 1,
+                ease: "power1.out",
+            });
+        });
+    },{scope:containerProject,dependencies:[]});
 
     useEffect(() => {
         if(!location)
@@ -19,31 +42,41 @@ const ProjectDetail = () => {
     }
 
     return(
-        <div className="container-ProjectDetail">
+        <div className="container-ProjectDetail" ref={containerProject}>
             <div className="ProjectDetail">
                 <span className='retour' onClick={handleClickRetour}>{t("return")}</span>
-                <span className="title">
-                    {t(`${project.libelle}-title`)}
-                </span>
-                <div className="container-role">
-                    <span className="company">
-                    {t(`${project.libelle}-company`)}
+                <div className="container-slideIn">
+                    <span className="title slideIn">
+                        {t(`${project.libelle}-title`)}
                     </span>
-                    <span className="role">
-                    {t(`${project.libelle}-role`)}
-                    </span>
+                </div>
+                <div className="container-slideIn">
+                    <div className="container-role slideIn">
+                        <span className="company">
+                            {t(`${project.libelle}-company`)}
+                        </span>
+                        <span className="role">
+                            {t(`${project.libelle}-role`)}
+                        </span>
+                    </div>
                 </div>
                 <div className="container-content">
                     <div className="container-desc">
-                        <span className="title">{t("myRole")}</span>
-                        <span className="desc">
-                        {t(`${project.libelle}-description`)}
-                        </span>
+                        <div className="container-slideIn">
+                            <span className="title slideIn">{t("myRole")}</span>
+                        </div>
+                        <div className="container-slideIn">
+                            <span className="desc slideIn">
+                                {t(`${project.libelle}-description`)}
+                            </span>
+                        </div>
                         <div className="container-techno">
                             {project.technos.map((tech) => {
                                 return(
-                                    <div className="techno">
-                                        {tech}
+                                    <div className="container-slideIn">
+                                        <div className="techno slideIn">
+                                            {tech}
+                                        </div>
                                     </div>
                                 )
                             })}
