@@ -89,7 +89,7 @@ const Projects = () => {
     },{scope:projectsContainer, dependencies:[]});
 
     return(
-        <div className="Projects" ref={projectsContainer}>
+        <div className="Projects" id="Projects" ref={projectsContainer}>
             <div className='container-slideIn'>
                 <span className='title slideIn'>{t("selectedWork")}</span>
             </div>

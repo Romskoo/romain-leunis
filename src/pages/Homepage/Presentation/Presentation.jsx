@@ -55,10 +55,13 @@ const Presentation = () => {
                     <ScrollingText texte={t("descPresentation")} parentRef={presentationContainer}/>             
                 </div>
                 <div className="container-slideIn">
-                    <div className="button-projects slideIn" >
-                        {t("myWork")}
-                    </div>
+                    <a href="#Projects" >
+                        <div className="button-projects slideIn" >
+                            {t("myWork")}
+                        </div>
+                    </a>
                 </div>
+                
             </div>
             <div className="image-container" >
                 <img src={PhotoRomain} ref={imageRef} alt="Romain" className='image'/>

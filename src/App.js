@@ -5,46 +5,23 @@ import Homepage from './pages/Homepage/Homepage';
 import Header from './components/Header/Header';
 import Introduction from './pages/Introduction/Introduction';
 import ProjectDetail from './pages/ProjectDetail/ProjectDetail';
-import Footer from './components/Footer/Footer';
 
 const Layout = () => {
   return(
     <>
       <Header/>
       <Outlet />
-      <Footer />
     </>
   )
 }
 
-const LayoutNoFooter = () => {
-  return(
-    <>
-      <Header/>
-      <Outlet />
-    </>
-  )
-}
 
 const router = createBrowserRouter([
   {
-    path: "/",
-    element: <LayoutNoFooter />,
+    element: <Layout />,
     children: [
       { path: "/", element: <Introduction /> },
-    ],
-  },
-  {
-    path: "/home",
-    element: <Layout />,
-    children: [
       { path: "/home", element: <Homepage /> },
-    ],
-  },
-  {
-    path: "/project",
-    element: <Layout />,
-    children: [
       { path: "/project", element: <ProjectDetail /> },
     ],
   },

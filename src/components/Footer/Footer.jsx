@@ -33,7 +33,7 @@ const Footer = () => {
           animation: uncover,
           scrub: true,
         })
-    },[]);
+    });
 
     return(
         <div className='Footer'>
@@ -58,4 +58,4 @@ const Footer = () => {
     )
 }
 
-export default memo(Footer);
+export default Footer;
