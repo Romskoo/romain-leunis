@@ -13,6 +13,5 @@
 
 <p align="center">
   <a href="https://romain-leunis.fr">Romain Leunis</a> is bringing you web development and design from the future.<br />
-  Our expertise is developing next-level websites and web applications including full frontend design.<br />
-  Why don't you check out the fancy time machine we built over there?
+  Checkout my portfolio on romain-leunis.fr.<br /
 </p>
