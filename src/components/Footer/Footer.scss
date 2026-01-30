@@ -1,0 +1,86 @@
+.Footer{
+    position: relative;
+    height: 400px;
+    width: 100%;
+    .footer-content{
+        background: linear-gradient(140deg, #000000 70%, #da124e );
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        box-sizing: border-box;
+        padding: 20px;
+
+        .title{
+            color: whitesmoke;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: 120px;
+        }
+
+        .contact{
+            font-size: 20px;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            flex-wrap: wrap;
+
+            .mail{
+                display: flex;
+                gap: 10px;
+                align-items: center;
+                flex-wrap: wrap;
+            }
+            .copy{
+                height: 20px;
+                cursor: pointer;
+            }
+
+            .copy:hover{
+                opacity: 0.7;
+            }
+        }
+
+        .socials{
+            display: flex;
+            gap: 20px;
+            .icon{
+                cursor: pointer;
+                height: 40px;
+            }
+
+            .icon:hover{
+                opacity: 0.7;
+            }
+        }
+
+        .madeBy{
+            display: flex;
+            gap: 10px;
+            text-align: center;
+            justify-content: center;
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    .Footer{
+        .footer-content{
+            .title{
+                font-size: 90px;
+            }
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    .Footer{
+        .footer-content{
+            align-items: start;
+            .title{
+                font-size: 50px;
+            }
+        }
+    }
+}

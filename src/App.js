@@ -1,14 +1,29 @@
-import logo from './logo.svg';
 import './App.css';
-import {createBrowserRouter,RouterProvider,} from "react-router-dom";
+import {createBrowserRouter,RouterProvider,Outlet} from "react-router-dom";
 
 import Homepage from './pages/Homepage/Homepage';
 import Header from './components/Header/Header';
+import Introduction from './pages/Introduction/Introduction';
+import ProjectDetail from './pages/ProjectDetail/ProjectDetail';
+
+const Layout = () => {
+  return(
+    <>
+      <Header/>
+      <Outlet />
+    </>
+  )
+}
+
 
 const router = createBrowserRouter([
   {
-    path: "/",
-    element: <Homepage/>,
+    element: <Layout />,
+    children: [
+      { path: "/", element: <Introduction /> },
+      { path: "/home", element: <Homepage /> },
+      { path: "/project", element: <ProjectDetail /> },
+    ],
   },
 ]);
 
@@ -16,7 +31,6 @@ const router = createBrowserRouter([
 function App() {
   return (
     <div className="App">
-      <Header/>
       <RouterProvider router={router} />
     </div>
   );

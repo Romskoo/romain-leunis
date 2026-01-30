@@ -1,60 +1,114 @@
 .presentation{
-    padding: 20px;
-    gap: 40px;
+    position: relative;
     display: flex;
-    flex-direction: column;
-    height: 100vh;
+    min-height: 100vh;
+    //width: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    //background-color: #111;
+    //border-top-left-radius: 35px;
+    //border-top-right-radius: 4px;
+    //border-bottom-right-radius: 35px;
+    //border-bottom-left-radius: 4px;
+    //margin: 15px;
+    flex-grow: 1;
+    box-sizing: border-box;
 
-    .container-text{
+    .container-slideIn{
+        overflow: hidden;
         display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 20px;
-
-        .title{
-            color: var(--color-primary);
-        }
-        .text{
-            width: 50%;
-            text-justify: distribute;
-            text-align: start;
-        }
+        flex-direction: column;  
     }
 
-    .container-romain{
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    .image-container {
+        position: relative;
+        display: inline-block;
+        height: 60vh;
+        overflow: hidden;
 
-        .romain{
-            width: 450px;
-            height: 300px;
-            border-radius: 40px;
-            background-image: url('../../../assets/romain.jpg');
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;
+        .image{
+            height: 100%;
+            
+            width: 100%;
+            object-fit: contain;
+        }
+    }
+      
+    .histoire-container{
+        padding: 30px;
+        box-sizing: border-box;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        //color: #222;
+        line-break: strict;
+        word-break: keep-all;
+        font-weight: 400;
+        line-height: 1.1;
+        font-size: 40px;
+        font-family: "Poppins", serif;
+        color: #DDD;
+
+        .title{
+            color: #FFF;
+            font-size: 60px;
+            font-weight: 500;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .button-projects{
+            background-color: #222;
+            color: #EEE;
+            padding-inline: 20px;
+            padding-block: 10px;
+            border-radius: 8px;
+            font-size: 22px;
+            cursor: pointer;
+            opacity: 1;
+        }
+
+        .button-projects:hover{
+            background-color: #333;
         }
     }
 }
 
-@media (max-width: 800px) {
-    .presentation{
-        .container-text{
-    
-            .title{}
 
-            .text{
-                width: 80%;
+@media (max-width: 1000px) {
+    .presentation{
+        min-height: 100vh;
+        flex-direction: column;
+        padding-top: 60px;
+    
+        .container-slideIn{
+        }
+    
+        .image-container {
+            margin-block: 20px;
+            height: 60%;
+    
+            .image{
             }
         }
-
-        .container-romain{
-            .romain{
-                width: 80%;
-                height: 250px;
+          
+        .histoire-container{
+            padding: 20px;
+            box-sizing: border-box;
+            width: 100%;
+            font-size: 8vw;
+            //min-height: 100vh;
+    
+            .title{
+                font-size: 40px;
+            }
+    
+            .button-projects{
             }
         }
     }
+    
 }

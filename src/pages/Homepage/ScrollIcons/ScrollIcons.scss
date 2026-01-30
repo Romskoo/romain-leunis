@@ -1,0 +1,33 @@
+.scroll-icons-container {
+    width: 120vw;
+    overflow: hidden;
+    display: flex;
+    padding-block: 20px;
+
+    .icon-container{
+        flex: 1 1;
+        display: flex;
+        justify-content: center;
+
+        .icon{
+            height: 10vh;           
+        }
+    }  
+}
+
+@media (max-width: 800px) {
+    .scroll-icons-container {
+        display: flex;
+        width:200vw;
+
+        .icon-container{
+            flex: 1 1;
+            display: flex;
+            justify-content: center;
+    
+            .icon{
+                height: 7vh;           
+            }
+        }  
+    }
+}

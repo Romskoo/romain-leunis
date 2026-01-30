@@ -1,0 +1,87 @@
+{
+    "introduction": "Design & Development of IT solutions.",
+    "discover": "Discover",
+    "software": "Software ",
+    "engineer":"Engineer",
+    "contactMe": "Contact Me",
+    "descHook1": "Young developer passionate about technology, sports, and entrepreneurship.",
+    "descHook2": "A new opportunity? ",
+    "myWork": "My projects",
+    "descPresentation": "Graduate of the ENSIIE engineering school specializing in information systems. I have been working for 6 years in the retail sector at STIME.",
+    "whoAmI": "Who am I?",
+    "years":"Years of",
+    "ofExperience":"experience",
+    "projects":"Projects",
+    "achieved":"achieved",
+    "ideas":"Ideas to",
+    "toHelpYou":"help you",
+    "madeBy":"Made by",
+    "me":"Me",
+    "clickToCopy":"Click to copy",
+
+    "professional":"Professional",
+    "academic":"Academic",
+    "selectedWork":"Selected work",
+    "myRole":"My role",
+    "return":"return",
+
+    "academicTitle1": "ENSIIE - Engineering Degree",
+    "academicDate1": "Sep 2021 - Sep 2024",
+    "academicDesc1": "Work-study program at the National School of Computer Science for Industry and Business. Specializations in quantum computing, green-IT, and emerging enterprise technologies.",
+
+    "academicTitle2": "IUT Sénart/Fontainebleau - Computer Science DUT",
+    "academicDate2": "Sep 2019 - Sep 2021",
+    "academicDesc2": "First year at IUT Sénart in the International track. Second year in Fontainebleau in the Work-Study program.",
+
+    "academicTitle3": "Lycée Talma - Science Baccalaureate",
+    "academicDate3": "Sep 2016 - Jul 2019",
+    "academicDesc3": "Scientific Baccalaureate in Life and Earth Sciences with an ISN (Computer Science) option. Honors: Bien (Good).",
+
+    "proTitle1": "Stime - Software Engineer",
+    "proDate1": "Sep 2024 - Present",
+    "proDesc1": "Design/development of various IT solutions: web applications, software, and automation scripts.",
+
+    "proTitle2": "Studio Panepinto - Web Master",
+    "proDate2": "June 2023 - August 2023",
+    "proDesc2": "Design/Development of the website for the dental practice Studio Panepinto in Milan.",
+
+    "proTitle3": "Stime - Software Engineer Apprentice",
+    "proDate3": "Sep 2020 - Sep 2024",
+    "proDesc3": "Design/development of various IT solutions: web applications, software, and automation scripts.",
+
+    "itemForgeup-title": "Coaching management application & strength training program.",
+    "itemForgeup-company": "ForgeUp",
+    "itemForgeup-role": "CEO",
+    "itemForgeup-description": "Design and development of the project. I completed this project alone, working on all aspects that a project has to offer: creating the idea and functional requirements, designing the visual identity and wireframes, developing the backend and frontend, setting up CI/CD to automate deployment, and managing production (configuring the Nginx reverse proxy, DNS redirection, and creating the SMTP server).",
+
+    "itemEventSW-title": "Street workout event forum.",
+    "itemEventSW-company": "EventSW",
+    "itemEventSW-role": "CEO",
+    "itemEventSW-description": "Design and development of the project. I completed this project alone, working on all aspects that a project has to offer: creating the idea and functional requirements, designing the visual identity and wireframes, developing the backend and frontend, setting up CI/CD to automate deployment, and managing production (configuring the Nginx reverse proxy, DNS redirection, and creating the SMTP server).",
+
+    "itemStudioPanepinto-title": "Showcase website for a dental office.",
+    "itemStudioPanepinto-company": "Studio Panepinto",
+    "itemStudioPanepinto-role": "Web Master",
+    "itemStudioPanepinto-description": "Design and development of the website. I carried out this project independently. I was able to experience all phases of project management and development: gathering and documenting requirements with the client, designing wireframes, developing the website, iterative work to best meet expectations, deployment, and production management (configuring the Nginx reverse proxy, DNS redirection).",
+    
+    "itemMavie-title": "Portal for the CEOs of the Groupement des Mousquetaires.",
+    "itemMavie-company": "Stime, Groupement des Mousquetaires",
+    "itemMavie-role": "Full-stack developer",
+    "itemMavie-description": "Website development. I was responsible for frontend development and worked on the backend within a team of 5 people. I also participated in business requirements discussions and refinements. I worked closely with clients and designers, supporting wireframe design, developing the frontend, and occasionally contributing to the backend.",
+
+    "itemTrombi-title": "CEO and store directory for the Groupement des Mousquetaires.",
+    "itemTrombi-company": "Stime, Groupement des Mousquetaires",
+    "itemTrombi-role": "Full-stack developer",
+    "itemTrombi-description": "Website development. I was responsible for frontend development and worked on the backend within a team of 5 people. I also participated in business requirements discussions and refinements. I worked closely with clients and designers, supporting wireframe design, developing the frontend, and occasionally contributing to the backend.",
+
+    "itemFlexApp-title": "PWA web application for flex office management.",
+    "itemFlexApp-company": "Stime, Groupement des Mousquetaires",
+    "itemFlexApp-role": "Full-stack developer",
+    "itemFlexApp-description": "Development of the web application. I was responsible for backend development and contributed to the frontend within a team of 3 people. I also participated in business requirements discussions and refinements. I worked closely with clients and designers, supporting wireframe design, developing the backend, and occasionally contributing to the frontend.",
+
+    "itemRestaurant-title": "Website template for restaurants.",
+    "itemRestaurant-company": "Personal project",
+    "itemRestaurant-role": "CEO",
+    "itemRestaurant-description": "Website development. I worked on this project alone, handling both design and desktop/mobile integration."
+
+}

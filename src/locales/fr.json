@@ -1,0 +1,86 @@
+{
+    "introduction": "Conception & Développement de solutions informatiques.",
+    "discover": "Découvrir",
+    "software": "Ingénieur ",
+    "engineer":"Logiciel",
+    "contactMe": "Me contacter",
+    "descHook1": "Jeune développeur passionné de technologie, de sport et d’entreprenariat.",
+    "descHook2": "Une nouvelle opportunité? ",
+    "myWork": "Mes projets",
+    "descPresentation": "Diplômé de l'école d'ingénieur ENSIIE spécialisée dans les systèmes d'information. Je travaille depuis 6 ans dans le secteur de la grande distribution au sein de la STIME.",
+    "whoAmI": "Qui je suis ?",
+    "years":"Années",
+    "ofExperience":"d'expérience",
+    "projects":"Projets",
+    "achieved":"réalisés",
+    "ideas":"Idées",
+    "toHelpYou":"pour t'aider",
+    "madeBy":"Fais par",
+    "me":"Moi",
+    "clickToCopy":"Clique pour copier",
+
+    "professional":"Professionnel",
+    "academic":"Académique",
+    "selectedWork":"Quelques projets",
+    "myRole":"Mon rôle",
+    "return":"retour",
+
+    "academicTitle1": "ENSIIE - Diplôme Ingénieur",
+    "academicDate1": "Sep 2021 - Sep 2024",
+    "academicDesc1": "Parcours alternance à l'École Nationale Supérieure d'Informatique pour l'Industrie et l'Entreprise. Options informatique quantique, green-IT et nouvelles technologies d'entreprise.",
+
+    "academicTitle2": "IUT Sénart/Fontainebleau - DUT Informatique",
+    "academicDate2": "Sep 2019 - Sep 2021",
+    "academicDesc2": "Première année à l'IUT de Sénart en parcours International. Deuxième année à Fontainebleau en parcours Alternance.",
+
+    "academicTitle3": "Lycée Talma - BAC S",
+    "academicDate3": "Sep 2016 - Juil 2019",
+    "academicDesc3": "Baccalauréat Scientifique SVT avec option ISN (Informatique). Mention Bien.",
+
+    "proTitle1": "Stime - Ingénieur logiciel",
+    "proDate1": "Sep 2024 - Aujourd'hui",
+    "proDesc1": "Conception/développement de solutions informatiques variées : applications web, logiciels et scripts d'automatisation.",
+
+    "proTitle2": "Studio Panepinto - Web Master",
+    "proDate2": "Juin 2023 - Août 2023",
+    "proDesc2": "Conception/Développement du site web du cabinet dentaire Studio Panepinto à Milan.",
+
+    "proTitle3": "Stime - Apprenti Ingénieur logiciel",
+    "proDate3": "Sep 2020 - Sep 2024",
+    "proDesc3": "Conception/développement de solutions informatiques variées : applications web, logiciels et scripts d'automatisation.",
+
+    "itemForgeup-title": "Application de gestion de coaching & programme de musculation.",
+    "itemForgeup-company": "ForgeUp",
+    "itemForgeup-role": "CEO",
+    "itemForgeup-description": "Conception et développement du projet. J'ai réalisé ce projet seul, travaillant sur tous les aspects qu'un projet a à offrir : création de l'idée et des besoins fonctionnels, conception de l'identité visuelle et des maquettes, développement de la partie backend et frontend, mise en place de la CI/CD pour automatiser le déploiement et gestion de la production (configuration du reverse proxy Nginx, redirection des DNS et création du serveur SMTP).",
+
+    "itemEventSW-title": "Forum d'événements de street workout.",
+    "itemEventSW-company": "EventSW",
+    "itemEventSW-role": "CEO",
+    "itemEventSW-description": "Conception et développement du projet. J'ai réalisé ce projet seul, travaillant sur tous les aspects qu'un projet a à offrir : création de l'idée et des besoins fonctionnels, conception de l'identité visuelle et des maquettes, développement de la partie backend et frontend, mise en place de la CI/CD pour automatiser le déploiement et gestion de la production (configuration du reverse proxy Nginx, redirection des DNS et création du serveur SMTP).",
+
+    "itemStudioPanepinto-title": "Site vitrine pour un cabinet dentaire.",
+    "itemStudioPanepinto-company": "Studio Panepinto",
+    "itemStudioPanepinto-role": "Web Master",
+    "itemStudioPanepinto-description": "Conception et développement du site web. J'ai réalisé ce projet en autonomie technique. J'ai pu expérimenter toutes les phases de gestion de projet et développement : recueil et écriture du besoin avec le client, conception des maquettes, développement du site web, travail itératif pour correspondre au mieux aux attentes, déploiement et gestion de la production (configuration du reverse proxy Nginx, redirection des DNS).",
+
+    "itemMavie-title": "Portail à destination des PDG du groupement des Mousquetaires.",
+    "itemMavie-company": "Stime, Groupement des Mousquetaires",
+    "itemMavie-role": "Développeur full-stack",
+    "itemMavie-description": "Développement du site web. J'étais responsable du développement du frontend et développeur sur le backend dans une équipe de 5 personnes. J'ai également participé aux expressions et affinages des besoins métiers. J'ai travaillé main dans la main avec les clients, ainsi que les designers. Accompagnement sur la conception des maquettes, développement de la partie frontend et développement ponctuel sur la partie backend.",
+
+    "itemTrombi-title": "Trombinoscope PDG et point de vente du groupement des Mousquetaires.",
+    "itemTrombi-company": "Stime, Groupement des Mousquetaires",
+    "itemTrombi-role": "Développeur full-stack",
+    "itemTrombi-description": "Développement du site web. J'étais responsable du développement du frontend et développeur sur le backend dans une équipe de 5 personnes. J'ai également participé aux expressions et affinages des besoins métiers. J'ai travaillé main dans la main avec les clients, ainsi que les designers. Accompagnement sur la conception des maquettes, développement de la partie frontend et développement ponctuel sur la partie backend.",
+
+    "itemFlexApp-title": "Application web PWA de gestion du flex office.",
+    "itemFlexApp-company": "Stime, Groupement des Mousquetaires",
+    "itemFlexApp-role": "Développeur full-stack",
+    "itemFlexApp-description": "Développement de l'application web. J'étais responsable du développement du backend et développeur sur le frontend dans une équipe de 3 personnes. J'ai également participé aux expressions et affinages des besoins métiers. J'ai travaillé main dans la main avec les clients, ainsi que les designers. Accompagnement sur la conception des maquettes, développement de la partie backend et développement ponctuel sur la partie frontend.",
+
+    "itemRestaurant-title": "Template de site web pour des restaurants.",
+    "itemRestaurant-company": "Projet personnel",
+    "itemRestaurant-role": "CEO",
+    "itemRestaurant-description": "Développement du site web. J'ai travaillé sur ce projet seul. Réalisant le design et l'intégration desktop/mobile."
+}

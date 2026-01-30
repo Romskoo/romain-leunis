@@ -22,7 +22,7 @@ const Skills = () => {
 
     return(
         <div className='Skills home-component'>
-            <span className='titre-section'>Mes compétances techniques</span>
+            <span className='titre-section'>Ma stack technique</span>
             <div className='container-section'>
                 <FadeIn className="box1-fadeIn" duration={1} x={-500} ref={animation}>
                     <div className="box">
@@ -31,12 +31,16 @@ const Skills = () => {
                         </span>
                         <div className='container-icons'>
                             <span className='texte'>
-                                Langages/Techno maitrisées
+                                Compétences techniques fortes
                             </span>
                             <div className='liste-icons'>
-                                <div className='icon-wrapper'>
+                                {/*<div className='icon-wrapper'>
                                     <img src={logoHtml} alt="html" className='icon' />
                                     <label >Html</label>
+                                </div>*/}
+                                <div className='icon-wrapper'>
+                                    <img src={logoReact} alt="react" className='icon' />
+                                    <label >React Js</label>
                                 </div>
                                 <div className='icon-wrapper'>
                                     <img src={logoCss} alt="css" className='icon' />
@@ -45,16 +49,12 @@ const Skills = () => {
                                 <div className='icon-wrapper'>
                                     <img src={logoJs} alt="js" className='icon' />
                                     <label >Js</label>
-                                </div>
-                                <div className='icon-wrapper'>
-                                    <img src={logoReact} alt="react" className='icon' />
-                                    <label >React Js</label>
-                                </div>
+                                </div>                               
                             </div>
                         </div>
                         <div className='container-icons'>
                             <span className='texte'>
-                                Déjà utilisées
+                                Compétences techniques intermédiaires
                             </span>
                             <div className='liste-icons'>
                                 <div className='icon-wrapper'>

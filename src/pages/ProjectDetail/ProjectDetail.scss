@@ -1,0 +1,180 @@
+.container-ProjectDetail{
+    display: flex;
+    flex-direction: column;
+    scroll-behavior: smooth;
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: #000;
+    position:relative ;
+    z-index: 2;
+
+    .container-slideIn{
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;  
+    }
+
+    .ProjectDetail{
+        width: 1000px;
+        box-sizing: border-box;
+        padding-inline: 20px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        background-color: #000;
+        color: #EEE;
+        gap: 30px;
+        margin-top: 80px;
+
+        .retour{
+            background-color: #111;
+            color: #EEE;
+            padding-inline: 20px;
+            padding-block: 10px;
+            border-radius: 8px;
+            font-size: 22px;
+            cursor: pointer;cursor: pointer;
+        }
+
+        .retour:hover{
+            background-color: #333;
+        }
+
+        .title{
+            color: #FFF;
+            font-size: 55px;
+            font-weight: 500;
+            font-family: "Poppins", serif;
+            line-height: 1.1em;
+        }
+
+        .container-role{
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            margin-top: 30px;
+
+            .company{
+                font-size: 25px;
+            }
+            .role{
+                font-size: 20px;
+                color: #777;
+            }
+        }
+
+        .container-content{
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            width: 100%;
+            margin-top: 50px;
+            min-height: 600px;
+
+            .container-desc{
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                width: 400px;
+
+                .title{
+                    color: #FFF;
+                    font-size: 45px;
+                    font-weight: 500;
+                    font-family: "Poppins", serif;
+                }
+                .desc{
+                    font-size: 20px;
+                    color: #777;
+                }
+
+                .container-techno{
+                    display: flex;
+                    gap: 10px;
+                    flex-wrap: wrap;
+                    margin-top: 30px;
+
+                    .techno{
+                        background-color:#111 ;
+                        padding-inline: 30px;
+                        padding-block: 20px;
+                        font-size: 20px;
+                        border-radius: 4px;
+                    }
+                }
+            }
+
+            .container-image{
+                position: relative;
+                
+                .image{
+                    position: absolute;
+                    top: -90px;
+                    right: 30px;
+                    width: 240px;
+                    height: 518px;
+                }
+
+                .iphone-mask{
+                    position: absolute;
+                    display: flex;
+                    background-image: url('../../assets/iphone.png');
+                    z-index: 3;
+                    width: 300px;
+                    height:578px;
+                    background-position: left top;
+                    background-repeat: no-repeat;
+                    background-size: 300px 578px;
+                    top: -120px;
+                    right: 0;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:1000px){
+    .container-ProjectDetail{
+    
+        .ProjectDetail{
+            width: 100%;
+            box-sizing: border-box;
+            margin-block: 80px;
+            margin-inline: 20px;
+
+            .title{
+                font-size: 40px;
+            }
+            .container-content{
+                flex-direction: column-reverse;
+                margin-top: 0;
+
+                .container-desc{
+                    width: 100%;
+                }
+
+                .container-image{
+                    width: 100%;
+                    height:578px;
+
+                    .image{
+                        top: 30px;
+                        left: calc(50%);
+                        transform: translate(-50%);
+                    }
+    
+                    .iphone-mask{
+                        top: 0px;
+                        left: 50%;
+                        transform: translate(-50%);
+                    }
+                }
+            }
+        }
+    }
+}
