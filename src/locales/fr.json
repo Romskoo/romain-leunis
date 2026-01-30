@@ -7,7 +7,7 @@
     "descHook1": "Jeune développeur passionné de technologie, de sport et d’entreprenariat.",
     "descHook2": "Une nouvelle opportunité? ",
     "myWork": "Mes projets",
-    "descPresentation": "Diplômé de l'école d'ingénieur ENSIIE spécialisée dans les systèmes d'information. Je travaille depuis 5 ans dans le secteur de la grande distribution au sein de la STIME.",
+    "descPresentation": "Diplômé de l'école d'ingénieur ENSIIE spécialisée dans les systèmes d'information. Je travaille depuis 6 ans dans le secteur de la grande distribution au sein de la STIME.",
     "whoAmI": "Qui je suis ?",
     "years":"Années",
     "ofExperience":"d'expérience",
@@ -48,6 +48,11 @@
     "proTitle3": "Stime - Apprenti Ingénieur logiciel",
     "proDate3": "Sep 2020 - Sep 2024",
     "proDesc3": "Conception/développement de solutions informatiques variées : applications web, logiciels et scripts d'automatisation.",
+
+    "itemForgeup-title": "Application de gestion de coaching & programme de musculation.",
+    "itemForgeup-company": "ForgeUp",
+    "itemForgeup-role": "CEO",
+    "itemForgeup-description": "Conception et développement du projet. J'ai réalisé ce projet seul, travaillant sur tous les aspects qu'un projet a à offrir : création de l'idée et des besoins fonctionnels, conception de l'identité visuelle et des maquettes, développement de la partie backend et frontend, mise en place de la CI/CD pour automatiser le déploiement et gestion de la production (configuration du reverse proxy Nginx, redirection des DNS et création du serveur SMTP).",
 
     "itemEventSW-title": "Forum d'événements de street workout.",
     "itemEventSW-company": "EventSW",

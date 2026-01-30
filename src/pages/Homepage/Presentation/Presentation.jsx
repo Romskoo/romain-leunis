@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 
-import PhotoRomain from '../../../assets/romain2.jpg';
+import PhotoRomain from '../../../assets/romain.PNG';
 
 import ScrollingText from '../../../components/TextScrollColor/TextScrollAnimation';
 

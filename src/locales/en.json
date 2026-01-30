@@ -7,7 +7,7 @@
     "descHook1": "Young developer passionate about technology, sports, and entrepreneurship.",
     "descHook2": "A new opportunity? ",
     "myWork": "My projects",
-    "descPresentation": "Graduate of the ENSIIE engineering school specializing in information systems. I have been working for 5 years in the retail sector at STIME.",
+    "descPresentation": "Graduate of the ENSIIE engineering school specializing in information systems. I have been working for 6 years in the retail sector at STIME.",
     "whoAmI": "Who am I?",
     "years":"Years of",
     "ofExperience":"experience",
@@ -48,6 +48,11 @@
     "proTitle3": "Stime - Software Engineer Apprentice",
     "proDate3": "Sep 2020 - Sep 2024",
     "proDesc3": "Design/development of various IT solutions: web applications, software, and automation scripts.",
+
+    "itemForgeup-title": "Coaching management application & strength training program.",
+    "itemForgeup-company": "ForgeUp",
+    "itemForgeup-role": "CEO",
+    "itemForgeup-description": "Design and development of the project. I completed this project alone, working on all aspects that a project has to offer: creating the idea and functional requirements, designing the visual identity and wireframes, developing the backend and frontend, setting up CI/CD to automate deployment, and managing production (configuring the Nginx reverse proxy, DNS redirection, and creating the SMTP server).",
 
     "itemEventSW-title": "Street workout event forum.",
     "itemEventSW-company": "EventSW",

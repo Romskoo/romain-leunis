@@ -19,12 +19,20 @@ import ImgFlexApp from '../../../assets/flexapp.png';
 import ImgFlexAppMobile from '../../../assets/flexapp-mobile.png';
 import ImgRestaurant from '../../../assets/restaurant.png';
 import ImgRestaurantMobile from '../../../assets/restaurant-mobile.png';
+import ImgForgeup from '../../../assets/forgeup.png';
+import ImgForgeupMobile from '../../../assets/forgeup-mobile.webp';
 
 gsap.registerPlugin(useGSAP);
 
 const Projects = () => {
     const navigate = useNavigate();
     const {t} = useTranslation();
+
+    const itemForgeup = {
+        libelle:"itemForgeup",
+        image:ImgForgeupMobile,
+        technos:["NextJs","Tailwind","MySQL","Figma","Nginx","GitHub actions","Claude code","PWA"]
+    }
 
     const itemEventSW = {
         libelle:"itemEventSW",
@@ -95,6 +103,9 @@ const Projects = () => {
             </div>
             <div className="container-project">
                 <div className='container-slideIn'>
+                    <Project img={ImgForgeup} nom="ForgeUp" dark={true} onClick={() => handleClickProject(itemForgeup)} className="slideIn"/>
+                </div>
+                <div className='container-slideIn'>
                     <Project img={ImgEventsw} nom="EventSW" dark={true} onClick={() => handleClickProject(itemEventSW)} className="slideIn"/>
                 </div>
                 <div className='container-slideIn'>
@@ -108,9 +119,6 @@ const Projects = () => {
                 </div>
                 <div className='container-slideIn'>
                     <Project img={ImgFlexApp} nom="Flex App" dark={true} onClick={() => handleClickProject(itemFlexApp)} className="slideIn"/>
-                </div>
-                <div className='container-slideIn'>
-                    <Project img={ImgRestaurant} nom="Template restaurant" dark={false} onClick={() => handleClickProject(itemRestaurant)} className="slideIn"/>
                 </div>
             </div>           
         </div>
