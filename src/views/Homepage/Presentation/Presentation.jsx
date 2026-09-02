@@ -1,3 +1,5 @@
+'use client';
+
 import './Presentation.scss';
 import { memo, useRef, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -64,7 +66,7 @@ const Presentation = () => {
                 
             </div>
             <div className="image-container" >
-                <img src={PhotoRomain} ref={imageRef} alt="Romain" className='image'/>
+                <img src={PhotoRomain.src} ref={imageRef} alt="Romain" className='image'/>
             </div>
         </div>
     )

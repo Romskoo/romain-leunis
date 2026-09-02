@@ -1,3 +1,5 @@
+'use client';
+
 import './Footer.scss';
 import { memo } from 'react';
 import gsap from 'gsap';
@@ -40,12 +42,12 @@ const Footer = () => {
             <div className='footer-content'>
                 <span className='title'><TypingText text="Romain Leunis" pauseTime={2500}/></span>
                 <div className="contact">
-                    <span>{t("contactMe")} :</span> <span className='mail'> contact@romain-leunis.fr <img src={IconCopy} className='copy' alt='copy' onClick={() => {navigator.clipboard.writeText("contact@romain-leunis.fr")}}/></span>
+                    <span>{t("contactMe")} :</span> <span className='mail'> contact@romain-leunis.fr <img src={IconCopy.src} className='copy' alt='copy' onClick={() => {navigator.clipboard.writeText("contact@romain-leunis.fr")}}/></span>
                     
                 </div>
                 <div className="socials">
-                    <a href="https://www.linkedin.com/in/romain-leunis/" target='_blank' rel="noreferrer" ><img src={LogoLinkedin} className='icon' alt="linkedin"/></a>
-                    <a href="https://github.com/Romskoo" target='_blank' rel="noreferrer"><img src={LogoGithub} className='icon'  alt="github"/></a>
+                    <a href="https://www.linkedin.com/in/romain-leunis/" target='_blank' rel="noreferrer" ><img src={LogoLinkedin.src} className='icon' alt="linkedin"/></a>
+                    <a href="https://github.com/Romskoo" target='_blank' rel="noreferrer"><img src={LogoGithub.src} className='icon'  alt="github"/></a>
                 </div>
                 <div className="madeBy">
                     <span>{t("madeBy")} <span className='primary'>{t("me")}</span> |</span>

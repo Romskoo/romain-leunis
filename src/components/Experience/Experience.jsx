@@ -1,10 +1,12 @@
+'use client';
+
 import './Experience.scss';
 
 const Experience = ({title,date,description,skills,logo}) => {
 
     return(
         <div className='Experience'>
-            <img src={logo} className='logo' />
+            <img src={logo.src || logo} className='logo' alt='logo' />
             <div className='container-body'>
                 <div className='container-top'>
                     <span className='title'>{title}</span>

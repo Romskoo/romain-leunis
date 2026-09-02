@@ -1,3 +1,5 @@
+'use client';
+
 import './Homepage.scss';
 
 import Hook from './Hook/Hook';

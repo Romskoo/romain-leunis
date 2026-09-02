@@ -1,5 +1,7 @@
+'use client';
+
 import './ProjectDetail.scss';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useRouter } from 'next/navigation';
 import { useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import gsap from 'gsap';
@@ -9,11 +11,9 @@ import Footer from '../../components/Footer/Footer';
 
 gsap.registerPlugin(useGSAP);
 
-const ProjectDetail = () => {
+const ProjectDetail = ({ project }) => {
     const {t} = useTranslation();
-    const location = useLocation();
-    const navigate = useNavigate();
-    const project = location.state;
+    const router = useRouter();
     const containerProject = useRef(null);
 
     useEffect(() => {
@@ -38,13 +38,8 @@ const ProjectDetail = () => {
         });
     },{scope:containerProject,dependencies:[]});
 
-    useEffect(() => {
-        if(!location)
-            navigate('/home');
-    },[location]);
-
     const handleClickRetour = () => {
-        navigate(-1);
+        router.back();
     }
 
     return(
@@ -78,9 +73,9 @@ const ProjectDetail = () => {
                                 </span>
                             </div>
                             <div className="container-techno">
-                                {project.technos.map((tech) => {
+                                {project.technos.map((tech, index) => {
                                     return(
-                                        <div className="container-slideIn">
+                                        <div className="container-slideIn" key={index}>
                                             <div className="techno slideIn">
                                                 {tech}
                                             </div>
@@ -90,7 +85,7 @@ const ProjectDetail = () => {
                             </div>
                         </div>
                         <div className="container-image">
-                            <img src={project.image} alt="project" className="image"/>
+                            <img src={project.image.src || project.image} alt="project" className="image"/>
                             <span className="iphone-mask" />
                         </div>
                     </div>

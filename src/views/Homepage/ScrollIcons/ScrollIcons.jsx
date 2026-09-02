@@ -1,3 +1,5 @@
+'use client';
+
 import './ScrollIcons.scss';
 
 import React, { useEffect, useRef } from 'react';
@@ -33,25 +35,25 @@ const ScrollIcons = () => {
     return (
         <div className="scroll-icons-container" ref={containerRef}>
             <div className='icon-container'>
-                <img src={logoCss} alt="icone1" className="icon"/>
+                <img src={logoCss.src} alt="icone1" className="icon"/>
             </div>
             <div className='icon-container'>
-                <img src={logoHtml} alt="icone2" className="icon"/>
+                <img src={logoHtml.src} alt="icone2" className="icon"/>
             </div>
             <div className='icon-container'>
-                <img src={logoJs} alt="icone3" className="icon"/>
+                <img src={logoJs.src} alt="icone3" className="icon"/>
             </div>
             <div className='icon-container'>
-                <img src={logoReact} alt="icone4" className="icon"/>
+                <img src={logoReact.src} alt="icone4" className="icon"/>
             </div>
             <div className='icon-container'>
-                <img src={logoNext} alt="icone5" className="icon"/>       
-            </div>  
+                <img src={logoNext.src} alt="icone5" className="icon"/>
+            </div>
             <div className='icon-container'>
-                <img src={logoPython} alt="icone5" className="icon"/>       
-            </div>   
+                <img src={logoPython.src} alt="icone5" className="icon"/>
+            </div>
             <div className='icon-container'>
-                <img src={logoCSharp} alt="icone5" className="icon"/>       
+                <img src={logoCSharp.src} alt="icone5" className="icon"/>
             </div> 
         </div>
     );

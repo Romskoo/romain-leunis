@@ -1,3 +1,5 @@
+'use client';
+
 import './Experiences.scss';
 import Experience from '../../../components/Experience/Experience';
 import { useState, useRef } from 'react';

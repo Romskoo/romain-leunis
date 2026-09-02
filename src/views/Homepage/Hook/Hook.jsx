@@ -1,3 +1,5 @@
+'use client';
+
 import './Hook.scss';
 
 import { useRef, useState } from 'react';
@@ -7,7 +9,6 @@ import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import AnimationGif from '../../../assets/bg-animation3.gif';
-import IconCopy from '../../../assets/copying.png';
 
 gsap.registerPlugin(useGSAP);
 gsap.registerPlugin(ScrollTrigger);
@@ -62,7 +63,7 @@ const Hook = () => {
 
     return(
         <div className='Hook' ref={hookContainer}>
-            <img src={AnimationGif} alt="gif"  className='animation-gif'/>
+            <img src={AnimationGif.src} alt="gif"  className='animation-gif'/>
             <div className='title-container'>
                 <div className='title'>
                     {t("software")}<span className='primary'>{t("engineer")}</span>

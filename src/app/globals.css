@@ -1,10 +1,8 @@
 :root {
-  /*Thème*/
+  /*Theme*/
   --bg-color: #000;
   --text-color: #ffffff;
   --primary-color: #1e90ff;
-
-  
 }
 
 [data-theme="dark"] {
@@ -29,17 +27,24 @@ body {
 
   background-color: var(--bg-color);
   color: var(--text-color);
-  
 }
 
-a{
+a {
   text-decoration: none;
   color: unset;
 }
-
 
 @media (max-width: 800px) {
   body {
     font-size: 14px;
   }
+}
+
+.App {
+  width: 100%;
+  height: 100%;
+}
+
+.App .primary {
+  color: #da124e;
 }

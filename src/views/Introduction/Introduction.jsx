@@ -1,10 +1,11 @@
+'use client';
+
 import './Introduction.scss';
-import { useNavigate } from 'react-router-dom';
+import { useRouter } from 'next/navigation';
 
 import TypingText from '../../components/TypingText/TypingText';
 
 import { useTranslation } from "react-i18next";
-import "../../i18n"; 
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 
@@ -12,10 +13,10 @@ gsap.registerPlugin(useGSAP);
 
 const Introduction = () => {
     const { t } = useTranslation();
-    const navigate = useNavigate();
+    const router = useRouter();
 
     const handleClickDecouvrir = () => {
-        navigate('/home');
+        router.push('/home');
     }
 
     useGSAP(() => {
