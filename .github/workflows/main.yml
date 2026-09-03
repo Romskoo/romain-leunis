@@ -33,5 +33,5 @@ jobs:
           key: ${{ secrets.VPS_SSH_KEY }}
           port: 22
           source: "out/*"
-          target: "/home/${{ secrets.VPS_USER }}/romain-leunis"
+          target: "/home/${{ secrets.VPS_USER }}/romain-leunis/build"
           strip_components: 1
