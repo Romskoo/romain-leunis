@@ -29,10 +29,12 @@ const LanguagePicker = () => {
     }, [i18n]);
 
     const languages = [
-        { code: "en", label: "🇬🇧 English" },
-        { code: "fr", label: "🇫🇷 Français" },
-        { code: "es", label: "🇪🇸 Español" },
+        { code: "en", label: "English" },
+        { code: "fr", label: "Français" },
+        { code: "es", label: "Español" },
     ];
+
+    const currentLang = mounted ? i18n.language.split("-")[0] : "fr";
 
     const changeLanguage = (lng) => {
         i18n.changeLanguage(lng);
@@ -55,13 +57,18 @@ const LanguagePicker = () => {
     return (
         <div className="language-picker" ref={dropdownRef}>
             <button className="dropdown-button" onClick={() => setIsOpen(!isOpen)}>
-                <img src={IconLanguageWhite.src} alt="world" className="icon-language"/> {mounted ? i18n.language.split("-")[0].toUpperCase() : "FR"} ▼
+                <img src={IconLanguageWhite.src} alt="world" className="icon-language"/> {currentLang.toUpperCase()} ▼
             </button>
             {isOpen && (
                 <ul className="dropdown-menu" >
                     {languages.map((lang) => (
-                        <li key={lang.code} onClick={() => changeLanguage(lang.code)}>
-                            {lang.label}
+                        <li
+                            key={lang.code}
+                            className={lang.code === currentLang ? "active" : ""}
+                            onClick={() => changeLanguage(lang.code)}
+                        >
+                            <span className="code">{lang.code.toUpperCase()}</span>
+                            <span className="name">{lang.label}</span>
                         </li>
                     ))}
                 </ul>
