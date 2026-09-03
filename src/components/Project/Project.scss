@@ -3,15 +3,19 @@
     width: 300px;
     height: 200px;
     overflow: hidden;
-    border-radius: 4px;
+    border-radius: 22px;
     cursor: pointer;
+    border: 1px solid var(--line);
+    box-shadow: 0 16px 34px rgba(67, 60, 30, 0.08);
+    transition: box-shadow 300ms ease, transform 300ms ease;
 
     .bg{
         width: 100%;
         height: 100%;
-        opacity: 0.1;
-        filter: saturate(0);
-        transition: opacity 1s, transform 1s, filter 1s;
+        object-fit: cover;
+        opacity: 0.15;
+        filter: saturate(0) sepia(20%);
+        transition: opacity 600ms ease, transform 600ms ease, filter 600ms ease;
     }
 
     .mask{
@@ -26,34 +30,40 @@
         text-align: center;
 
         .title-light{
-            color: whitesmoke;
+            color: var(--cream-soft);
         }
 
         .title-dark{
-            color: #222;
+            color: var(--ink);
         }
 
         .title{
-            
-            font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-            font-size: 40px;
-            transition: opacity 1s;
+            font-family: var(--font-display);
+            font-style: italic;
+            font-weight: 500;
+            font-size: 32px;
+            transition: opacity 500ms ease;
         }
     }
 }
 
 .dark{
-    background-color: #222;
+    background-color: var(--matcha-900);
 }
 
 .light{
-    background-color: #CCC;
+    background-color: var(--matcha-100);
+}
+
+.Project:hover{
+    transform: translateY(-4px);
+    box-shadow: 0 22px 44px rgba(67, 60, 30, 0.14);
 }
 
 .Project:hover .bg{
-    filter: saturate(1);
+    filter: saturate(1) sepia(0%);
     opacity: 1;
-    transform: scale3d(1.1, 1.1, 1);
+    transform: scale3d(1.08, 1.08, 1);
 }
 
 .Project:hover .title{

@@ -10,7 +10,7 @@
     .container-slideIn{
         overflow: hidden;
         display: flex;
-        flex-direction: column;  
+        flex-direction: column;
     }
 
     .container-project{
@@ -22,22 +22,23 @@
     }
 
     .title{
-        color: #FFF;
-        font-size: 60px;
+        color: var(--ink);
+        font-size: 54px;
         font-weight: 500;
-        font-family: "Poppins", serif;
+        font-family: var(--font-display);
+        margin-bottom: 10px;
     }
 }
 
 @media (max-width: 1000px) {
     .Projects{
-    
+
         .container-project{
         }
-    
+
         .title{
-            font-size: 40px;
+            font-size: 38px;
         }
     }
-    
+
 }

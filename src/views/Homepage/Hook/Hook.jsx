@@ -8,8 +8,6 @@ import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-import AnimationGif from '../../../assets/bg-animation3.gif';
-
 gsap.registerPlugin(useGSAP);
 gsap.registerPlugin(ScrollTrigger);
 
@@ -32,7 +30,7 @@ const Hook = () => {
             opacity: 0,
             duration: 1,
             ease: "power1.out",
-            stagger:0.5,
+            stagger:0.3,
             scrollTrigger:{
                 trigger:hookContainer.current,
                 start:'top top+=20%',
@@ -46,30 +44,49 @@ const Hook = () => {
             opacity: 0,
             duration: 1,
             ease: "none",
-            delay:0.5
+            scrollTrigger:{
+                trigger:".title-container",
+                start:'top 85%',
+                end:"bottom 15%",
+                toggleActions: "play reverse play reverse",
+            }
         });
 
-        gsap.to(".animation-gif", {
-            y: "80%",
-            ease: "none",
-            scrollTrigger: {
-                trigger: hookContainer.current,
-                start: "top top",
-                end: "bottom top",
-                scrub: 3, 
-            },
-        });
+        gsap.fromTo(".wave-path",
+            { strokeDashoffset: 1000 },
+            {
+                strokeDashoffset: 0,
+                duration: 2,
+                ease: "power2.out",
+                delay: 0.3,
+                scrollTrigger:{
+                    trigger:".title-container",
+                    start:'top 85%',
+                    end:"bottom 15%",
+                    toggleActions: "play reverse play reverse",
+                }
+            }
+        );
     },{ scope: hookContainer, dependencies:[] });
 
     return(
         <div className='Hook' ref={hookContainer}>
-            <img src={AnimationGif.src} alt="gif"  className='animation-gif'/>
             <div className='title-container'>
                 <div className='title'>
                     {t("software")}<span className='primary'>{t("engineer")}</span>
                 </div>
+                <svg className='wave-line' viewBox="0 0 800 120" preserveAspectRatio="none" fill="none">
+                    <path
+                        className='wave-path'
+                        d="M0,60 Q40,20 80,60 T160,60 T240,60 T320,60 T400,60 T480,60 T560,60 T640,60 T720,60 T800,60"
+                        stroke="currentColor"
+                        strokeWidth="5"
+                        strokeLinecap="round"
+                        strokeDasharray="1000"
+                    />
+                </svg>
             </div>
-            
+
             <div className="description-container">
                 <div className="description">
                     <div className='container-donnees '>

@@ -2,17 +2,24 @@
     width: 120vw;
     overflow: hidden;
     display: flex;
-    padding-block: 20px;
+    padding-block: 30px;
 
     .icon-container{
         flex: 1 1;
         display: flex;
         justify-content: center;
+        align-items: center;
 
         .icon{
-            height: 10vh;           
+            height: 6.5vh;
+            filter: grayscale(35%) opacity(0.85);
+            transition: filter 300ms ease;
         }
-    }  
+
+        .icon:hover{
+            filter: grayscale(0%) opacity(1);
+        }
+    }
 }
 
 @media (max-width: 800px) {
@@ -24,10 +31,10 @@
             flex: 1 1;
             display: flex;
             justify-content: center;
-    
+
             .icon{
-                height: 7vh;           
+                height: 5vh;
             }
-        }  
+        }
     }
 }

@@ -1,27 +1,51 @@
 :root {
-  /*Theme*/
-  --bg-color: #000;
-  --text-color: #ffffff;
-  --primary-color: #1e90ff;
+  /* Palette "matcha" — crème chaude + vert matcha */
+  --cream: #f6f1e4;
+  --cream-soft: #fbf8f0;
+  --paper: #fffdf8;
+  --ink: #2b2a20;
+  --ink-soft: #6f6a58;
+  --ink-faint: #a39d8a;
+
+  --matcha-100: #e6e6cd;
+  --matcha-300: #b9c79a;
+  --matcha-500: #74915a;
+  --matcha-600: #5c7845;
+  --matcha-700: #435334;
+  --matcha-900: #232b1b;
+
+  --line: rgba(43, 42, 32, 0.12);
+  --shadow-color: rgba(67, 60, 30, 0.12);
+
+  --bg-color: var(--cream);
+  --text-color: var(--ink);
+  --primary-color: var(--matcha-600);
+
+  --font-display: "Fraunces", "Iowan Old Style", serif;
+  --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
 [data-theme="dark"] {
-  --bg-color: #000;
-  --text-color: #ffffff;
-  --primary-color: #1e90ff;
+  --bg-color: var(--matcha-900);
+  --text-color: var(--cream-soft);
+  --primary-color: var(--matcha-300);
 }
 
 [data-theme="light"] {
-  --bg-color: #ffffff;
-  --text-color: #000000;
-  --primary-color: #007bff;
+  --bg-color: var(--cream);
+  --text-color: var(--ink);
+  --primary-color: var(--matcha-600);
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: Suisse, sans-serif;
+  font-family: var(--font-body);
   font-weight: 400;
   font-size: 16px;
 
@@ -32,6 +56,24 @@ body {
 a {
   text-decoration: none;
   color: unset;
+}
+
+::selection {
+  background: var(--matcha-500);
+  color: var(--cream-soft);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--cream);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--matcha-300);
+  border-radius: 10px;
 }
 
 @media (max-width: 800px) {
@@ -46,5 +88,7 @@ a {
 }
 
 .App .primary {
-  color: #da124e;
+  color: var(--matcha-500);
+  font-style: italic;
+  font-family: var(--font-display);
 }

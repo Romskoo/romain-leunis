@@ -22,7 +22,7 @@ const Header = () => {
 
     return(
         <div className='header'>
-                <span className='name' onClick={handleClickLogo}><img src={LogoWhite.src} alt="rl" className='logo'/>Romain Leunis</span>
+                <span className='name' onClick={handleClickLogo}><img src={LogoBlack.src} alt="rl" className='logo'/>Romain Leunis</span>
                 <LanguagePicker />
                 {/*<div className='container-menu'>
                     <span className='item'><a href="#presentation">Présentation</a></span>

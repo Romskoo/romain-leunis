@@ -33,7 +33,7 @@ export default function ScrollingText({ texte, parentRef }) {
 
     // Animation de changement de couleur progressive
     tl.from(split.words, { // Cibler les mots au lieu des caractères
-      color: "#222",
+      color: "#d8d2bd",
       stagger: 0.1, // Décalage progressif sur chaque mot
       duration: 1.5,
     });
