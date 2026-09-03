@@ -31,7 +31,7 @@ jobs:
           host: ${{ secrets.VPS_HOST }}
           username: ${{ secrets.VPS_USER }}
           key: ${{ secrets.VPS_SSH_KEY }}
-          port: 49152
+          port: 22
           source: "out/*"
           target: "/home/${{ secrets.VPS_USER }}/romain-leunis"
           strip_components: 1
