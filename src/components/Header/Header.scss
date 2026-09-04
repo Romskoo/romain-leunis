@@ -29,11 +29,13 @@
             cursor: pointer;
             display: flex;
             align-items: center;
+            flex-shrink: 0;
             gap: 10px;
             color: var(--ink);
+            white-space: nowrap;
             .logo{
                 height: 26px;
-                
+
             }
         }
         .container-menu{

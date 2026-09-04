@@ -84,8 +84,9 @@
             font-family: var(--font-display);
             font-style: italic;
             font-weight: 500;
-            font-size: 120px;
+            font-size: clamp(28px, 13vw, 120px);
             letter-spacing: -1px;
+            white-space: nowrap;
             z-index: 2;
         }
         .desc{
@@ -125,25 +126,9 @@
 }
 
 
-@media (width <= 1000px) {
-    .Introduction{
-        .container-text{
-            .titre{
-                font-size: 90px;
-                max-width: 90%;
-            }
-        }
-
-    }
-}
-
 @media (width <= 800px) {
     .Introduction{
         .container-text{
-            .titre{
-                font-size: 52px;
-                max-width: 90%;
-            }
             .desc{
                 font-size: 16px;
             }

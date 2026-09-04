@@ -7,7 +7,7 @@ import { useTranslation } from 'react-i18next';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import GifLogo from "../../../assets/R_surf_transparent.webp";
+import GifLogo from "../../../assets/R_surf_ride.webp";
 
 gsap.registerPlugin(useGSAP);
 gsap.registerPlugin(ScrollTrigger);
@@ -76,7 +76,7 @@ const Hook = () => {
                 <div className='title'>
                     {t("software")}<span className='primary'>{t("engineer")}</span>
                 </div>
-                <img src={GifLogo.src} alt="surf" />
+                <img className='surf-gif' src={GifLogo.src} alt="surf" />
                 {/*<svg className='wave-line' viewBox="0 0 800 120" preserveAspectRatio="none" fill="none">
                     <path
                         className='wave-path'
