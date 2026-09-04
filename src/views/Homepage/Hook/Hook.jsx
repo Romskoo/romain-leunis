@@ -7,6 +7,7 @@ import { useTranslation } from 'react-i18next';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import GifLogo from "../../../assets/R_surf_transparent.webp";
 
 gsap.registerPlugin(useGSAP);
 gsap.registerPlugin(ScrollTrigger);
@@ -52,7 +53,7 @@ const Hook = () => {
             }
         });
 
-        gsap.fromTo(".wave-path",
+        /*gsap.fromTo(".wave-path",
             { strokeDashoffset: 1000 },
             {
                 strokeDashoffset: 0,
@@ -66,7 +67,7 @@ const Hook = () => {
                     toggleActions: "play reverse play reverse",
                 }
             }
-        );
+        );*/
     },{ scope: hookContainer, dependencies:[] });
 
     return(
@@ -75,7 +76,8 @@ const Hook = () => {
                 <div className='title'>
                     {t("software")}<span className='primary'>{t("engineer")}</span>
                 </div>
-                <svg className='wave-line' viewBox="0 0 800 120" preserveAspectRatio="none" fill="none">
+                <img src={GifLogo.src} alt="surf" />
+                {/*<svg className='wave-line' viewBox="0 0 800 120" preserveAspectRatio="none" fill="none">
                     <path
                         className='wave-path'
                         d="M0,60 Q40,20 80,60 T160,60 T240,60 T320,60 T400,60 T480,60 T560,60 T640,60 T720,60 T800,60"
@@ -84,7 +86,7 @@ const Hook = () => {
                         strokeLinecap="round"
                         strokeDasharray="1000"
                     />
-                </svg>
+                </svg>*/}
             </div>
 
             <div className="description-container">
